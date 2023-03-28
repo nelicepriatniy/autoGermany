@@ -985,7 +985,7 @@ label {
 
 .allredy-sale {
   margin-top: 280px;
-  padding-bottom: 140px;
+  padding-bottom: 128px;
 }
 
 .as__text {
@@ -1011,6 +1011,7 @@ label {
 .as-slide-t {
   display: flex;
   margin-bottom: 16px;
+  justify-content: space-between;
 }
 
 .sa-slide-t__left.light {
@@ -1497,6 +1498,10 @@ label {
   margin-bottom: 8px;
 }
 
+.button-last-form {
+  width: 100%;
+}
+
 .checkbox-wraper {
   display: flex;
   align-items: center;
@@ -1681,4 +1686,12 @@ footer {
 .wijet-item__img {
   height: 50px;
   width: 50px;
+}
+
+.ckeck {
+  position: absolute;
+  top: 0;
+  z-index: 101;
+  opacity: 0.3;
+  width: 100vw;
 }/*# sourceMappingURL=style.css.map */
