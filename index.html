@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header">
+            <img src="./assets/1x1.svg" data-src="./assets/header/LOGO.svg" alt="" class="header__logo lazy">
+            <ul class="header__menu">
+                <li class="header__menu__item">Актуальные предложения</li>
+                <li class="header__menu__item">Рассчитать стоимость</li>
+            </ul>
+            <div class="header__wpButton">
+                <img src="./assets/1x1.svg" data-src="./assets/header/ic_baseline-whatsapp.svg" alt=""
+                    class="header__wpButton__wpLogo lazy">
+                <p>WhatsApp</p>
+            </div>
+            <div class="header__phone">
+                <p class="header__phone__phone">8 (800)123-12-12</p>
+                <p class="header__phone__city">Москва</p>
+            </div>
+            <img src="./assets/1x1.svg" data-src="./assets/header/Burger.svg" alt="" class="header__burger lazy">
+        </div>
+    </header>
+
+    <div class="headerMenu">
+        <div class="burgerWraper">
+            <img src="./assets/1x1.svg" alt="" data-src="./assets/headerMenu/Burger.svg" class="burgerWraper__img lazy">
+        </div>
+        <div class="menuWraper">
+            <h2 class="menuWraper__heading">МЕНЮ</h2>
+            <ul class="menuWraper__list">
+                <li class="menuWraper__list__item">ТОП-спроса</li>
+                <li class="menuWraper__list__item">Рассчитать стоимость</li>
+                <li class="menuWraper__list__item">О компании</li>
+                <li class="menuWraper__list__item">Наши продажи</li>
+                <li class="menuWraper__list__item">Актуальные предложения</li>
+                <li class="menuWraper__list__item">Тарифы</li>
+                <li class="menuWraper__list__item">Контакты</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popupClose"></div>
+
+    <main>
+        <section class="top">
+            <div class="container topTop">
+                <div class="top__text">
+                    <h1 class="top__text__heading">Авто из Германии</h1>
+                    <ul class="topList">
+                        <li class="topList__item big-text"><img src="./assets/1x1.svg"
+                                data-src="./assets/top/list-arr.svg" alt="" class="topItemArr lazy">
+                            <p>Привезём автомобиль из Германии на заказ от 2-х недель</p>
+                        </li>
+                        <li class="topList__item big-text"><img src="./assets/1x1.svg"
+                                data-src="./assets/top/list-arr.svg" alt="" class="topItemArr lazy">
+                            <p>Дешевле на 20% рынка за счёт европейской дилерской лицензии и льготной таможни</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top__formBlock">
+                    <p class="top__formBlock__procent"><span>оплати </span>15%</p>
+                    <p class="top__formBlock__text text">Остальную сумму платите по факту получения авто</p>
+                    <button class="top__formBlock__button big-button arr">Подобрать автомобиль</button>
+                    <img src="./assets/1x1.svg" data-src="./assets/top/formbg.svg" alt=""
+                        class="top__fromBlock__bg lazy">
+                </div>
+            </div>
+            <div class="container topBtm">
+                <div class="topBtm__item">
+                    <div class="topBtm__item__line"></div>
+                    <h3 class="topBtm__item__heading">Льготная таможня</h3>
+                    <p class="text topBtm__item__text">Экономия на растаможке автомобиля до 42%</p>
+                </div>
+                <div class="topBtm__item">
+                    <div class="topBtm__item__line"></div>
+                    <h3 class="topBtm__item__heading">Без посредников</h3>
+                    <p class="text topBtm__item__text">Заключаем договор напрямую с европейским дилером</p>
+                </div>
+                <div class="topBtm__item">
+                    <div class="topBtm__item__line"></div>
+                    <h3 class="topBtm__item__heading">Быстрая доставка</h3>
+                    <p class="text topBtm__item__text">Доставим за 2–4 недели по официальному договору</p>
+                </div>
+                <div class="topBtm__item">
+                    <div class="topBtm__item__line"></div>
+                    <h3 class="topBtm__item__heading">Большой выбор</h3>
+                    <p class="text topBtm__item__text">Получаем на прямую лучшие предложения от дилеров</p>
+                </div>
+            </div>
+            <img src="./assets/1x1.svg" data-src="./assets/top/Main-screen.jpg" alt="" class="top__bg lazy">
+        </section>
+        <section class="top-spros">
+            <div class="container">
+                <div class="top-spros__text">
+                    <p class="top-spros__heading">ТОП-СПРОСА</p>
+                    <p class="big-text top-spros__p">*При клике на кнопку «Подборка» буду представлены товары
+                        с аналогичными параметрами на сайте mobile.de </p>
+                </div>
+                <div class="top-spros__tabs-btn">
+                    <div class="tab-btn active" data-sprostab="BMW">
+                        <p class="tab-btn__text">BMW</p>
+                        <img class="lazy tab-btn__img" src="./assets/1x1.svg" data-src="./assets/icons/bmw.svg" alt="">
+                    </div>
+                    <div class="tab-btn " data-sprostab="Audi">
+                        <p class="tab-btn__text">Audi</p>
+                        <img class="lazy tab-btn__img" src="./assets/1x1.svg" data-src="./assets/icons/audi.svg" alt="">
+                    </div>
+                    <div class="tab-btn " data-sprostab="Volkswagen">
+                        <p class="tab-btn__text">Volkswagen</p>
+                        <img class="lazy tab-btn__img" src="./assets/1x1.svg" data-src="./assets/icons/Volkswagen.svg"
+                            alt="">
+                    </div>
+                    <div class="tab-btn " data-sprostab="Mercedes">
+                        <p class="tab-btn__text">Mercedes-Benz</p>
+                        <img class="lazy tab-btn__img" src="./assets/1x1.svg"
+                            data-src="./assets/icons/Mercedes-Benz.svg" alt="">
+                    </div>
+                    <div class="tab-btn " data-sprostab="porsche">
+                        <p class="tab-btn__text">porsche</p>
+                        <img class="lazy tab-btn__img" src="./assets/1x1.svg" data-src="./assets/icons/porsche.svg"
+                            alt="">
+                    </div>
+                    <div class="tab-btn " data-sprostab="Ford">
+                        <p class="tab-btn__text">Ford</p>
+                        <img class="lazy tab-btn__img" src="./assets/1x1.svg" data-src="./assets/icons/Ford.svg" alt="">
+                    </div>
+                </div>
+                <div class="top-spros__tabContainer" id="BMW">
+                    <div class="top-spros-card">
+                        <div class="top-spros-card__top">
+                            <img src="./assets/1x1.svg" data-src="./assets/topSpros/1auto.png" alt=""
+                                class="top-spros-card__top__img lazy">
+                            <div class="top-spros-card-deal">
+                                <img src="./assets/1x1.svg" data-src="./assets/topSpros/rectangle.svg" alt=""
+                                    class="lazy">
+                                <p class="top-spros-deal-text">Выгода = 1.080.000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card-btm">
+                            <div class="top-spros-card-btm__left">
+                                <p class="bm-heading">BMW x5 </p>
+                                <p class="text bm-text">Год: <span>3-5 лет</span></p>
+                                <p class="text bm-text">Двигатель: <span>3.0 л./190 л.с./ Дизель</span></p>
+                                <p class="text bm-text">Автомат/полный привод <span></span></p>
+                            </div>
+                            <div class="top-spros-card-btm__right">
+                                <p class="bmr-heading">Цена:</p>
+                                <p class="big-text bmr-price-g">2.320.000 ₽</p>
+                                <p class="little-text bmr-g">В Германии</p>
+                                <p class="big-text bmr-price-r">2.650.000 ₽</p>
+                                <p class="little-text bmr-r">В России</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card__buttons">
+                            <button class="button">Заказать авто</button>
+                            <button class="podbor button arr">Подборка на <span> mobile.de </span></button>
+                        </div>
+                    </div>
+                    <div class="top-spros-card">
+                        <div class="top-spros-card__top">
+                            <img src="./assets/1x1.svg" data-src="./assets/topSpros/1auto.png" alt=""
+                                class="top-spros-card__top__img lazy">
+                            <div class="top-spros-card-deal">
+                                <img src="./assets/1x1.svg" data-src="./assets/topSpros/rectangle.svg" alt=""
+                                    class="lazy">
+                                <p class="top-spros-deal-text">Выгода = 1.080.000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card-btm">
+                            <div class="top-spros-card-btm__left">
+                                <p class="bm-heading">BMW x5 </p>
+                                <p class="text bm-text">Год: <span>3-5 лет</span></p>
+                                <p class="text bm-text">Двигатель: <span>3.0 л./190 л.с./ Дизель</span></p>
+                                <p class="text bm-text">Автомат/полный привод <span></span></p>
+                            </div>
+                            <div class="top-spros-card-btm__right">
+                                <p class="bmr-heading">Цена:</p>
+                                <p class="big-text bmr-price-g">2.320.000 ₽</p>
+                                <p class="little-text bmr-g">В Германии</p>
+                                <p class="big-text bmr-price-r">2.650.000 ₽</p>
+                                <p class="little-text bmr-r">В России</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card__buttons">
+                            <button class="button">Заказать авто</button>
+                            <button class="podbor button arr">Подборка на <span> mobile.de </span></button>
+                        </div>
+                    </div>
+                    <div class="top-spros-card">
+                        <div class="top-spros-card__top">
+                            <img src="./assets/1x1.svg" data-src="./assets/topSpros/1auto.png" alt=""
+                                class="top-spros-card__top__img lazy">
+                            <div class="top-spros-card-deal">
+                                <img src="./assets/1x1.svg" data-src="./assets/topSpros/rectangle.svg" alt=""
+                                    class="lazy">
+                                <p class="top-spros-deal-text">Выгода = 1.080.000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card-btm">
+                            <div class="top-spros-card-btm__left">
+                                <p class="bm-heading">BMW x5 </p>
+                                <p class="text bm-text">Год: <span>3-5 лет</span></p>
+                                <p class="text bm-text">Двигатель: <span>3.0 л./190 л.с./ Дизель</span></p>
+                                <p class="text bm-text">Автомат/полный привод <span></span></p>
+                            </div>
+                            <div class="top-spros-card-btm__right">
+                                <p class="bmr-heading">Цена:</p>
+                                <p class="big-text bmr-price-g">2.320.000 ₽</p>
+                                <p class="little-text bmr-g">В Германии</p>
+                                <p class="big-text bmr-price-r">2.650.000 ₽</p>
+                                <p class="little-text bmr-r">В России</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card__buttons">
+                            <button class="button">Заказать авто</button>
+                            <button class="podbor button arr">Подборка на <span> mobile.de </span></button>
+                        </div>
+                    </div>
+                    <div class="top-spros-card">
+                        <div class="top-spros-card__top">
+                            <img src="./assets/1x1.svg" data-src="./assets/topSpros/1auto.png" alt=""
+                                class="top-spros-card__top__img lazy">
+                            <div class="top-spros-card-deal">
+                                <img src="./assets/1x1.svg" data-src="./assets/topSpros/rectangle.svg" alt=""
+                                    class="lazy">
+                                <p class="top-spros-deal-text">Выгода = 1.080.000 ₽</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card-btm">
+                            <div class="top-spros-card-btm__left">
+                                <p class="bm-heading">BMW x5 </p>
+                                <p class="text bm-text">Год: <span>3-5 лет</span></p>
+                                <p class="text bm-text">Двигатель: <span>3.0 л./190 л.с./ Дизель</span></p>
+                                <p class="text bm-text">Автомат/полный привод <span></span></p>
+                            </div>
+                            <div class="top-spros-card-btm__right">
+                                <p class="bmr-heading">Цена:</p>
+                                <p class="big-text bmr-price-g">2.320.000 ₽</p>
+                                <p class="little-text bmr-g">В Германии</p>
+                                <p class="big-text bmr-price-r">2.650.000 ₽</p>
+                                <p class="little-text bmr-r">В России</p>
+                            </div>
+                        </div>
+                        <div class="top-spros-card__buttons">
+                            <button class="button">Заказать авто</button>
+                            <button class="podbor button arr">Подборка на <span> mobile.de </span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="calculator">
+            <div class="container">
+                <h2 class="calculator__heading">рассчитайте стоимость доставки из Германии в Москву</h2>
+                <p class="big-text calculator__text">Выбирайте авто на сайте mobile.de Вводите данные в калькулятор.
+                </p>
+                <div class="calculator__wraper">
+                    <div class="calculator-left">
+                        <img src="./assets/1x1.svg" data-src="./assets/calc/arr.svg" alt="" class="calc-arr lazy">
+                        <p class="title calculator-left__title">Калькулятор стоимости доставки автомобиля из Германии
+                        </p>
+                        <div class="calculator-inputs">
+                            <label class="calc-label" for="cena-calc">Цена на авто в евро, брутто</label>
+                            <input class="calc-inp text" id="cena-calc" type="number"
+                                placeholder="Введите только цифры (без лишних символов)">
+                            <label class="calc-label" for="cena-calc">Год выпуска авто</label>
+                            <select class="calc-inp text" name="year-calc" id="year-calc">
+                                <option class="text calc-opt" value="2021">2021</option>
+                                <option id="asddsa" class="text calc-opt" value="2021">2022</option>
+                                <option class="text calc-opt" value="2021">2023</option>
+                            </select>
+                            <label class="calc-label" for="obem-calc">Объём двигателя, л</label>
+                            <select class="calc-inp text" name="obem-calc" id="obem-calc">
+                                <option class="text calc-opt" value="2.0">2.0</option>
+                                <option class="text calc-opt" value="2.5">2.5</option>
+                                <option class="text calc-opt" value="3.4">3.4</option>
+                            </select>
+                            <label class="calc-label" for="obem-calc">Вариант растаможивания</label>
+                            <select class="calc-inp text" name="obem-calc" id="obem-calc">
+                                <option class="text calc-opt" value="2.0">Вариант 1</option>
+                                <option class="text calc-opt" value="2.5">Вариант 2</option>
+                                <option class="text calc-opt" value="3.4">Вариант 3</option>
+                            </select>
+                            <button class="big-button calc-btn">Рассчитать стоимость</button>
+                            <div class="text-calc">
+                                <p class="text-calc-p">Итого стоимость в Москве: </p>
+                                <p class="calc-price"> 1 800 000 ₽ </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-right">
+                        <div class="calc-right__tg">
+                            <p class="big-text calc-right__tg__text">
+                                Все самые актуальные предложения у нас в Telegram-канале
+                            </p>
+                            <a class="button seti-button"><img src="./assets/1x1.svg" data-src="./assets/icons/tg.svg"
+                                    alt="" class="lazy btn-seti__img"> Подписаться в Telegram</a>
+                        </div>
+                        <div class="calc-right__wp">
+                            <p class="big-text calc-right__wp__text">
+                                Пишите нам в WhatsApp мы отправим Вам расчет:
+                            </p>
+                            <a class="button seti-button wp-button"><img src="./assets/1x1.svg"
+                                    data-src="./assets/icons/wp.svg" alt="" class="lazy btn-seti__img"> Написать в
+                                WhatsApp </a>
+                            <p class="text wp-text">*Возможна организация доставки по индивидуальному маршруту с учётом
+                                ваших потребностей</p>
+                            <img src="./assets/1x1.svg" data-src="./assets/calc/iPhone.png" alt=""
+                                class="lazy wp-iphobe">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about-wraper">
+                    <div class="about-left">
+                        <img src="./assets/1x1.svg" data-src="./assets/about/car.png" alt=""
+                            class="lazy about-left__img">
+                        <p class="title about-left__text">У нас есть отличный опыт доставки авто из Германии под ключ
+                            и мы готовы в этом помочь! </p>
+                        <div class="about-left__cards">
+                            <div class="about-card">
+                                <p class="about-card__num">2</p>
+                                <p class="text about-card__text">От 2-х недель доставка в РФ</p>
+                                <img src="./assets/1x1.svg" data-src="./assets/calc/arr.svg" alt=""
+                                    class="lazy about-card__arr">
+                            </div>
+                            <div class="about-card">
+                                <p class="about-card__num">50</p>
+                                <p class="text about-card__text">До 50% экономия от рынка РФ</p>
+                                <img src="./assets/1x1.svg" data-src="./assets/calc/arr.svg" alt=""
+                                    class="lazy about-card__arr">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <h2 class="about-right__heading">О компании</h2>
+                        <p class="big-text about-right__text">
+                            Около 15 лет в автомобильном бизнесе. Мы комплексно помогаем людям подойти к покупке
+                            хорошего автомобиля. У нас есть дилерская лицензия, благодаря который мы напрямую
+                            сотрудничаем с европейскими автодилерами, что позволяет гарантировать чистоту сделки
+                            и качество автомобилей. Это экономит наше время при оформлении покупки и получения всего
+                            за 1 час «зелёных номеров».
+                        </p>
+                        <p class="big-text about-right__text">
+                            Мы гарантируем качество предлагаемых автомобилей, так как сотрудничаем только с официальными
+                            автодилерами, поэтому, обращаясь к нам, клиенты уверены, что автомобиль не будет
+                            восстановленным после ДТП или после пожара, не находится в угоне, не является
+                            залоговым и т.д.
+                        </p>
+                        <p class="big-text about-right__text">
+                            Мы всегда в курсе всех последних нововведений или изменений в законодательстве Германии
+                            по вопросам автомобильной жизни.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="allredy-sale">
+            <div class="container">
+                <p class="big-text as__text">Уже 1500 клиентов получили свой автомобиль</p>
+                <h2 class="as__heading">Автомобили, которые мы уже доставили</h2>
+                <div class="swiper as-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left">
+                                        <p class="sa-slide-t__left__name">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text">Передний привод, Автомат</p>
+                                    </div>
+                                </div>
+                                <p class="as-price">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left">
+                                        <p class="sa-slide-t__left__name">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text">Передний привод, Автомат</p>
+                                    </div>
+                                </div>
+                                <p class="as-price">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left">
+                                        <p class="sa-slide-t__left__name">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text">Передний привод, Автомат</p>
+                                    </div>
+                                </div>
+                                <p class="as-price">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left">
+                                        <p class="sa-slide-t__left__name">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text">Передний привод, Автомат</p>
+                                    </div>
+                                </div>
+                                <p class="as-price">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left">
+                                        <p class="sa-slide-t__left__name">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text">Передний привод, Автомат</p>
+                                    </div>
+                                </div>
+                                <p class="as-price">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left">
+                                        <p class="sa-slide-t__left__name">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text">Передний привод, Автомат</p>
+                                    </div>
+                                </div>
+                                <p class="as-price">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="swiper-button-prev"></div> -->
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                    <div class="puggin">
+                        <div class="swiper-pagination">
+                        </div>
+                        <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/next.svg" alt=""
+                            class="lazy as-next-btn">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="act-sale">
+            <div class="container">
+                <p class="big-text acts__text">Уже 1500 клиентов получили свой автомобиль</p>
+                <h2 class="acts__heading">Автомобили, которые мы уже доставили</h2>
+                <div class="swiper as-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left light">
+                                        <p class="sa-slide-t__left__name light">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text light">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text light">Передний привод, Автомат</p>
+                                    </div>
+                                    <div class="sa-slide-t__right light">
+                                        <p class="sa-r-text">Смотреть видео: </p>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                                                class="seti-slider__img lazy">YouTube</a>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                                                class="seti-slider__img lazy">Telegram</a>
+                                    </div>
+                                </div>
+                                <p class="as-price light">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price light">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button light">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left light">
+                                        <p class="sa-slide-t__left__name light">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text light">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text light">Передний привод, Автомат</p>
+                                    </div>
+                                    <div class="sa-slide-t__right light">
+                                        <p class="sa-r-text">Смотреть видео: </p>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                                                class="seti-slider__img lazy">YouTube</a>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                                                class="seti-slider__img lazy">Telegram</a>
+                                    </div>
+                                </div>
+                                <p class="as-price light">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price light">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button light">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left light">
+                                        <p class="sa-slide-t__left__name light">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text light">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text light">Передний привод, Автомат</p>
+                                    </div>
+                                    <div class="sa-slide-t__right light">
+                                        <p class="sa-r-text">Смотреть видео: </p>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                                                class="seti-slider__img lazy">YouTube</a>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                                                class="seti-slider__img lazy">Telegram</a>
+                                    </div>
+                                </div>
+                                <p class="as-price light">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price light">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button light">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left light">
+                                        <p class="sa-slide-t__left__name light">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text light">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text light">Передний привод, Автомат</p>
+                                    </div>
+                                    <div class="sa-slide-t__right light">
+                                        <p class="sa-r-text">Смотреть видео: </p>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                                                class="seti-slider__img lazy">YouTube</a>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                                                class="seti-slider__img lazy">Telegram</a>
+                                    </div>
+                                </div>
+                                <p class="as-price light">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price light">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button light">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left light">
+                                        <p class="sa-slide-t__left__name light">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text light">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text light">Передний привод, Автомат</p>
+                                    </div>
+                                    <div class="sa-slide-t__right light">
+                                        <p class="sa-r-text">Смотреть видео: </p>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                                                class="seti-slider__img lazy">YouTube</a>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                                                class="seti-slider__img lazy">Telegram</a>
+                                    </div>
+                                </div>
+                                <p class="as-price light">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price light">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button light">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide as-slide">
+                            <img src="./assets/1x1.svg" data-src="./assets/allredy-sale/car.png" alt=""
+                                class="as-slide__img lazy">
+                            <div class="as-slide__btm">
+                                <div class="as-slide-t">
+                                    <div class="sa-slide-t__left light">
+                                        <p class="sa-slide-t__left__name light">BMW X6 | 2022</p>
+                                        <p class="text sa-slide-t__left__text light">Бензин, Объем 3.4 л, </p>
+                                        <p class="text sa-slide-t__left__text light">Передний привод, Автомат</p>
+                                    </div>
+                                    <div class="sa-slide-t__right light">
+                                        <p class="sa-r-text">Смотреть видео: </p>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                                                class="seti-slider__img lazy">YouTube</a>
+                                        <a href="#" class="seti-slider"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                                                class="seti-slider__img lazy">Telegram</a>
+                                    </div>
+                                </div>
+                                <p class="as-price light">3 000 000 руб.</p>
+                                <p class="little-text as-rf-price light">Средняя цена в РФ 3 500 000 руб.</p>
+                                <div class="as-slide__buttons">
+                                    <div class="little-button arr as-slide-button">Оставить заявку</div>
+                                    <div class="little-button as-slide-white-button light">Подробнее</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="swiper-button-prev"></div> -->
+
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                    <div class="puggin">
+                        <div class="swiper-pagination light">
+                        </div>
+                        <img src="./assets/1x1.svg" data-src="./assets/act-sale/next.svg" alt=""
+                            class="lazy as-next-btn">
+                    </div>
+                </div>
+                <div class="act-sale__tg">
+                    <p class="title act-sale__tg__text">Узнайте о самых актуальных предложениях по автомобилям
+                        в Германии у нас в Telegram</p>
+                    <a class="button seti-button"><img src="./assets/1x1.svg" data-src="./assets/icons/tg.svg" alt=""
+                            class="lazy btn-seti__img"> Подписаться в Telegram</a>
+                </div>
+            </div>
+
+        </section>
+        <section class="why-we">
+            <div class="container">
+                <div class="ww__heading">
+                    <img src="./assets/1x1.svg" data-src="./assets/calc/arr.svg" alt="" class="lazy ww__heading__arr">
+                    <h2 class="ww__heading__text">Почему клиенты предпочитают работать с нами</h2>
+                </div>
+                <div class="ww__wraper">
+                    <div class="ww-item">
+                        <h3 class="ww-item__heading">Работа проверенными продавцами </h3>
+                        <div class="ww-item__line"></div>
+                        <p class="text ww-item__text">Проверяем не только автомобиль, но и у кого приобретаем
+                            автомобиль. Работаем с официальными дилерами и с самыми надежными площадками по продаже
+                            поддержанных авто.</p>
+                    </div>
+                    <div class="ww-item">
+                        <h3 class="ww-item__heading">Официальные сделки по договору </h3>
+                        <div class="ww-item__line"></div>
+                        <p class="text ww-item__text">В договоре указана конечная стоимость автомобиля под ключ,
+                            прозрачная система цен на оформление и услуги. Вы можете быть уверены — сумма и условия,
+                            прописанные в договоре, не изменятся в ходе нашей работы</p>
+                    </div>
+                    <div class="ww-item">
+                        <img src="./assets/1x1.svg" data-src="./assets/way-we/auto.png" alt=""
+                            class="ww-item__img lazy">
+                    </div>
+                    <div class="ww-item">
+                        <h3 class="ww-item__heading">Профессиональная команда</h3>
+                        <div class="ww-item__line"></div>
+                        <p class="text ww-item__text">В штате имеются высококвалифицированные водители-профессионалы со
+                            стажем работы и высоким уровнем подготовки, которые безопасно и гарантированно доставят
+                            транспортное средство к заказчику</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="price">
+            <div class="container">
+                <p class="big-text price__text">Выберите для себя подходящий список услуг</p>
+                <h2 class="price__heading">Стоимость доставки авто из Германии</h2>
+                <div class="price__wraper">
+                    <div class="price-card">
+                        <div class="price-card__top">
+                            <p class="text price-card__top__text">1 вариант</p>
+                            <p class="price-card__top__procent">15<span>%</span></p>
+                        </div>
+                        <p class="title price-card__title">«По предоплате»</p>
+                        <p class="text price-card__text">Вносите задаток 15%, как подтверждение намерений.
+                            Всю сделку и доставку мы осуществляем за свой счет.
+                            Остальную сумму оплачивайте по факту при получении автомобиля.</p>
+                    </div>
+                    <div class="price-card light">
+                        <div class="price-card__top">
+                            <p class="text price-card__top__text">2 вариант</p>
+                            <p class="price-card__top__procent">100%</p>
+                        </div>
+                        <p class="title price-card__title">«Под ключ»</p>
+                        <p class="text price-card__text">Стоимость доставки автомобиля «под ключ» <span>5 000 €</span>
+                            <br>
+                            В этом случае вы полностью оплачивайте стоимость автомобиля и стоимость растаможивания.
+                        </p>
+                    </div>
+                    <img src="./assets/1x1.svg" data-src="./assets/calc/arr.svg" alt="" class="lazy price-arr">
+                    <div class="price-card light">
+                        <img src="./assets/1x1.svg" data-src="./assets/price/car.png" alt=""
+                            class="lazy price-card__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="last">
+            <div class="container">
+                <div class="last-wraper">
+                    <div class="last-left">
+                        <h2 class="last-left__heading">Свяжитесь с нами любым удобным способом</h2>
+                        <p class="big-text last-left__text">Мы ответим на все ваши вопросы, а также подберем до 5
+                            вариантов автомобилей под ваши требования и бюджет</p>
+                        <div class="last-left__mob">
+                            <img src="./assets/1x1.svg" data-src="./assets/last/phone.svg" alt=""
+                                class="lazy last-mob-img">
+                            <div class="last-left__mob__text">
+                                <p class="big-text last-left__mob__num">8 (800)123-12-12</p>
+                                <p class="little-text last-left__mob__city">Москва</p>
+                                <p class="big-text last-left__mob__num">8 (800)123-12-12</p>
+                                <p class="little-text last-left__mob__city">Чехия</p>
+                            </div>
+                        </div>
+                        <div class="last-left__geo">
+                            <img src="./assets/1x1.svg" data-src="./assets/last/geo.svg" alt=""
+                                class="lazy last-geo-img">
+                            <div class="last-left__geo-wraper">
+                                <p class="big-text last-left__geo-text">Chehia Genova.st 5-78</p>
+                            </div>
+                        </div>
+                        <a href="#" class="button last-left__button"> <img src="./assets/last/wp.svg" alt=""
+                                class="lazy last-left__button__img"> Написать WhatsApp</a>
+                    </div>
+                    <div class="last-right">
+                        <p class="title last-right__title">Оставьте заявку на подбор автомобиля на сайте</p>
+                        <form action="">
+                            <input class="last-form-inp text" type="text" placeholder="Имя">
+                            <input class="last-form-inp text" type="text" placeholder="Телефон">
+                            <input class="last-form-inp text" type="text" placeholder="Ваш примерный бюджет ">
+                            <div class="checkbox-wraper">
+                                <input type="checkbox" id="polytic-checkbox" checked>
+                                <label for="polytic-checkbox" class="checklabel active"> </label>
+                                <label class="little-text checklabela" for="polytic-checkbox">Я согласен (на) с
+                                    политикой конфиденциальности</label>
+                            </div>
+                            <button class="big-button" type="submit">Оставить заявку </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/1x1.svg" data-src="./assets/last/bg.png" alt="" class="last__bg lazy">
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-l">
+                <img src="./assets/1x1.svg" data-src="./assets/header/LOGO.svg" alt="" class="lazy footer__logo">
+                <p class="little-text footer-l__text">Авто-дилер ЗАПАД © 2023</p>
+                <p class="little-text footer-raz">Сайт разработан <span>Chagovets Studio</span></p>
+            </div>
+            <div class="footer-r">
+                <p class="text footer-r__letx">Подписывайтесь на наш канал:</p>
+                <div class="footer-r__seti">
+                    <a href="#" class="seti-slider footer-seti"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/you.svg" alt=""
+                            class="seti-slider__img lazy">YouTube
+                    </a>
+                    <a href="#" class="seti-slider footer-seti"><img  src="./assets/1x1.svg" data-src="./assets/act-sale/tg.svg" alt=""
+                            class="seti-slider__img lazy">Telegram
+                    </a>
+                </div>
+                <a href="#" class="text footer-r__polityc">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <img  src="./assets/1x1.svg" data-src="./assets/icons/footerUp.svg" alt="" class="lazy footer-top">
+    </footer>
+
+    <div class="widjet">
+        <img src="./assets/1x1.svg" data-src="./assets/icons/wiget-close.svg" alt="" class="lazy widjet__img-close">
+        <img src="./assets/1x1.svg" data-src="./assets/icons/wiget.svg" alt="" class="lazy widjet__img">
+    </div>
+
+    <div class="wijet-open">
+        <a href="#" class="wijet-item">
+            <p class="wijet-text">Позвонить</p>
+            <img src="./assets/1x1.svg" data-src="./assets/wiget/phone.svg" alt="" class="lazy wijet-item__img">
+        </a>
+        <a href="#" class="wijet-item">
+            <p class="wijet-text">WhatsApp</p>
+            <img src="./assets/1x1.svg" data-src="./assets/wiget/wp.svg" alt="" class="lazy wijet-item__img">
+        </a>
+        <a href="#" class="wijet-item">
+            <p class="wijet-text">Viber</p>
+            <img src="./assets/1x1.svg" data-src="./assets/wiget/viber.svg" alt="" class="lazy wijet-item__img">
+        </a>
+        <a href="#" class="wijet-item">
+            <p class="wijet-text">Telegram</p>
+            <img src="./assets/1x1.svg" data-src="./assets/wiget/tg.svg" alt="" class="lazy wijet-item__img">
+        </a>
+    </div>
+
+    <!-- <p class="little-text">маленький текст</p>
+    <p class="text">текст</p>
+    <p class="big-text">большой текст</p>
+    <p class="title">подзаголовок</p>
+    <h3>заголовок 3</h3>
+    <h2>заголовок 2</h2>
+    <h1>заголовок 1</h1>
+    <br>
+    <br>
+    <br>
+    <button class="big-button">Big button</button>
+    <button class="big-button arr">Big button</button>
+    <button class="button">Button</button>
+    <button class="button arr">Button</button>
+    <button class="little-button">Little button</button>
+    <button class="little-button arr">Little button</button> -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
