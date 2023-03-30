@@ -77,6 +77,34 @@ const alSale = new Swiper('.as-slider', {
     },
 });
 
+const alSaleLap = new Swiper('.as-slider-lap', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    autoHeight: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class = "' + className + '">' + (index + 1) + '</span>';
+        },
+    },
+    navigation: {
+        nextEl: '.as-next-btn',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      }
+    }
+});
+
 
 const actSale = new Swiper('.as-slider', {
     slidesPerView: 3,
@@ -93,17 +121,30 @@ const actSale = new Swiper('.as-slider', {
     },
 });
 
+
+const lapTabs = new Swiper('.lap-slider-tabs', {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.st-next',
+      prevEl: '.st-prew',
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      }
+    }
+});
+
 //активация хедера
-
-// let header = document.querySelector('header');
-// window.onscroll = function(){
-//   if (window.scrollY > 100) {
-//     header.classList.add('active')
-//   } else {
-//     header.classList.remove('active')
-
-//   }
-// }
 
 
 
@@ -152,4 +193,32 @@ let wijetOpen = document.querySelector('.wijet-open')
 wijetBtn.onclick = ()=>{
     wijetBtn.classList.toggle('active')
     wijetOpen.classList.toggle('active')
+}
+
+//изменения номера слайдера в мобилке lapTabs
+
+let numSlide = document.querySelector('.numSlideThere');
+let kolSlides = document.querySelector('.kolSlideThere');
+let slides = document.querySelectorAll('.lap-slides')
+
+lapTabs.on('slideChangeTransitionStart', ()=>{
+    numSlide.innerHTML = lapTabs.activeIndex + 1;
+    kolSlides.innerHTML = slides.length;
+})
+
+numSlide.innerHTML = lapTabs.activeIndex + 1;
+kolSlides.innerHTML = slides.length;
+
+//открытие всего текста в о нас в мобилке
+
+if(window.innerWidth < 600){
+    let moreBtn = document.querySelector('.mob-btn-more-text')
+    let blocks = document.querySelectorAll('.not-mob-active')
+
+    moreBtn.onclick = ()=>{
+        moreBtn.classList.add('active')
+        blocks.forEach(el=>{
+            el.classList.add('active')
+        })
+    }
 }
