@@ -243,6 +243,97 @@ h1 {
     }
 }
 
+//анимации
+
+.animate {
+    transition: 1.2s ease;
+}
+
+.h1-animate {
+    transform: translateY(-25px);
+    opacity: 0;
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.subtitle-animate {
+    opacity: 0;
+    transition-delay: .2s;
+    &.active {
+        opacity: 1;
+    }
+}
+
+.card-animate {
+    transform: translateY(-25px);
+    opacity: 0;
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+    } 
+
+}
+
+.cd2 {
+    transition-delay: .2s;
+}
+
+.cd4 {
+    transition-delay: .4s;
+}
+
+.cd6 {
+    transition-delay: .6s;
+}
+
+.img-animate {
+    scale: .5;
+    opacity: 0;
+    transition-delay: .4s;
+    &.active {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.text-animate {
+    opacity: 0; 
+    &.active {
+        opacity: 1;
+    }
+
+}
+
+.arr-animate {
+    opacity: 0;
+    transform: translateX(-25px);
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.num-animate {
+    opacity: 0;
+    transform: translateX(-25px);
+    &.active {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.h3-animate {
+    opacity: 0;
+    &.active {
+        opacity: 1;
+    }
+
+}
+
+//основные стили
+
 .container {
     width: 1160px;
     margin: 0 calc((100vw - 1160px)/2) 0 calc((100vw - 1160px)/2);
@@ -880,6 +971,12 @@ label {
     left: -30px;
     width: 90px;
     height: 135px;
+    transform: translateX(-25px);
+    opacity: 0;
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .calc-label {

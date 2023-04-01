@@ -151,24 +151,118 @@ const lapTabs = new Swiper('.lap-slider-tabs', {
 let header = document.querySelector('header');
 header.classList.add('active')
 let last_scroll = 0;
-window.onscroll = function(){
-  if (window.scrollY > 10) {
-    if(window.scrollY > last_scroll){
-      header.classList.remove('active')
-    }else{
-      header.classList.add('active')
-    }
-  } else {
-    
-    header.classList.add('active')
-  }
-  last_scroll = window.scrollY;
-  if(window.scrollY > 10) {
-    header.classList.add('bgTrue')
-  } else {
-    header.classList.remove('bgTrue')
+// window.onscroll = function(){
+// }
 
-  }
+//анимация при скролле
+
+
+if(window.innerWidth > 1100) {
+    let windowHeight = window.innerHeight;
+    let animBlocks = document.querySelectorAll('.animate');
+    let windowScroll = window.scrollY + windowHeight;
+    
+    function getPosition(element) {
+        var yPosition = 0;
+    
+        while(element) {
+            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+            element = element.offsetParent;
+        }
+    
+        return yPosition;
+    }
+    
+    window.onscroll = ()=>{
+        animBlocks.forEach(el=>{
+            windowScroll = window.scrollY + windowHeight;
+            let topoffset = getPosition(el);
+            if(topoffset < windowScroll) {
+                el.classList.add('active');
+            }
+        })
+        if (window.scrollY > 10) {
+          if(window.scrollY > last_scroll){
+            header.classList.remove('active')
+          }else{
+            header.classList.add('active')
+          }
+        } else {
+          
+          header.classList.add('active')
+        }
+        last_scroll = window.scrollY;
+        if(window.scrollY > 10) {
+          header.classList.add('bgTrue')
+        } else {
+          header.classList.remove('bgTrue')
+      
+        }
+    }
+
+    animBlocks.forEach(el=>{
+        windowScroll = window.scrollY + windowHeight;
+        let topoffset = getPosition(el);
+        if(topoffset < windowScroll) {
+            el.classList.add('active');
+        }
+    })
+    
+} else {
+    let windowHeight = window.innerHeight;
+    let animBlocks = document.querySelectorAll('.animate');
+    let windowScroll = window.scrollY + windowHeight;
+
+    animBlocks.forEach(el=>{
+        el.classList.add('active')
+    })
+    
+    function getPosition(element) {
+        var yPosition = 0;
+    
+        while(element) {
+            yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+            element = element.offsetParent;
+        }
+    
+        return yPosition;
+    }
+    
+    window.onscroll = ()=>{
+        animBlocks.forEach(el=>{
+            windowScroll = window.scrollY + windowHeight;
+            let topoffset = getPosition(el);
+            if(topoffset < windowScroll) {
+                el.classList.add('active');
+            }
+        })
+        if (window.scrollY > 10) {
+          if(window.scrollY > last_scroll){
+            header.classList.remove('active')
+          }else{
+            header.classList.add('active')
+          }
+        } else {
+          
+          header.classList.add('active')
+        }
+        last_scroll = window.scrollY;
+        if(window.scrollY > 10) {
+          header.classList.add('bgTrue')
+        } else {
+          header.classList.remove('bgTrue')
+      
+        }
+    }
+
+    animBlocks.forEach(el=>{
+        windowScroll = window.scrollY + windowHeight;
+        let topoffset = getPosition(el);
+        if(topoffset < windowScroll) {
+            el.classList.add('active');
+        }
+    })
+
 }
 
 //активация лейбла для чекбокса
@@ -221,4 +315,81 @@ if(window.innerWidth < 600){
             el.classList.add('active')
         })
     }
+}
+
+//работоспособность калькулятора
+
+let buttoncalc = document.querySelector('.calc-btn');
+let priceCalcInp  = document.querySelector('#cena-calc');
+let yearCalcInp  = document.querySelector('#year-calc');
+let obemCalcInp  = document.querySelector('#obem-calc');
+let variantCalcInp  = document.querySelector('#variant-calc');
+let pricewcalcIn = document.querySelector('.calc-price');
+
+buttoncalc.onclick = ()=>{
+    let priceCalcInpValue = priceCalcInp.value;
+    let yearCalcInpValue = yearCalcInp.value;
+    let obemCalcInpValue = obemCalcInp.value;
+    let variantCalcInpValue = variantCalcInp.value;
+    let yearNum = Number(yearCalcInpValue);
+    let obemNum = Number(obemCalcInpValue);
+    let priceNum = Number(priceCalcInp.value);
+    let tamNum = Number(variantCalcInpValue.value);
+    console.log("цена = " + priceCalcInpValue)
+    console.log("год = " + yearNum)
+    console.log("объем = " + obemCalcInpValue)
+    console.log("вариант = " + variantCalcInpValue)
+
+    let var1 = (priceNum) - ((priceNum)/100*16);
+
+    let var2;
+
+    if (yearNum > 20){
+        if(priceNum < 8500) {
+            var2 = priceNum/100*54;
+        } else if(priceNum >= 8500 && priceNum <= 169000) {
+            var2 = priceNum/100*48;
+
+        } else (
+            var2 = priceNum/100*35
+        )
+    } else if (yearNum <= 20 && yearNum >= 15) {
+        if(obemNum <= 1) {
+            var2 = obemNum*1000000*1.5
+        } else if(obemNum >= 1 && obemNum <= 1.5) {
+            var2 = obemNum*1000000*1.7
+        } else if(obemNum >= 1.5 && obemNum <= 1.8) {
+            var2 = obemNum*1000000*2.5
+        } else if(obemNum >= 1.8 && obemNum <= 2.3) {
+            var2 = obemNum*1000000*2.7
+        } else if(obemNum >= 2.3 && obemNum <= 3) {
+            var2 = obemNum*1000000*3
+        } else if(obemNum > 3) {
+            var2 = obemNum*1000000*3.6
+        }
+    } else if (yearNum < 15) {
+        if(obemNum <= 1) {
+            var2 = obemNum*1000000*3
+        } else if(obemNum >= 1 && obemNum <= 1.5) {
+            var2 = obemNum*1000000*3.2
+        } else if(obemNum >= 1.5 && obemNum <= 1.8) {
+            var2 = obemNum*1000000*3.5
+        } else if(obemNum >= 1.8 && obemNum <= 2.3) {
+            var2 = obemNum*1000000*4.8
+        } else if(obemNum >= 2.3 && obemNum <= 3) {
+            var2 = obemNum*1000000*5
+        } else if(obemNum > 3) {
+            var2 = obemNum*1000000*5.7
+        }
+    }
+    let var3 = var1 +var2;
+
+    
+    console.log("var1 = " + var1)
+    console.log("var2 = " + var2)
+    console.log("var3 = " + var3)
+
+
+    pricewcalcIn.innerHTML = var1 + var2 + var3;
+
 }
