@@ -732,6 +732,16 @@ header.active {
        column-gap: 40px;
   row-gap: 60px;
   margin-top: 40px;
+  position: absolute;
+  transition: all 0.4s ease;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+.top-spros__tabContainer.visible {
+  position: relative;
+  opacity: 1;
+  z-index: 3;
 }
 
 .top-spros-card__top {
@@ -1981,6 +1991,17 @@ footer {
     display: flex;
     max-width: 100%;
     margin-top: 40px;
+    position: absolute;
+    transition: all 0.4s ease;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+  .lap-slider-tabs.visible {
+    position: relative;
+    opacity: 1;
+    z-index: 3;
   }
   .top-spros-card__top {
     width: 600px;
@@ -2430,6 +2451,7 @@ footer {
   .top__formBlock {
     width: 300px;
     padding: 20px 10px;
+    margin-top: 88px;
   }
   .top__formBlock__procent {
     font-size: 50px;
@@ -2488,10 +2510,15 @@ footer {
   .top-spros__p {
     width: 100%;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+  }
+  .top-spros__tabs-btn {
+    margin-top: 55px;
   }
   .top-spros__heading {
     margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 125%;
   }
   .top-spros__tabs-btn {
     width: 100%;
@@ -2510,8 +2537,8 @@ footer {
     height: 35px;
   }
   .top-spros-card__top {
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    height: auto;
   }
   .top-spros-card-deal {
     width: 160px;
@@ -2539,6 +2566,7 @@ footer {
     padding: 20px 0;
     justify-content: center;
     margin-top: 10px;
+    width: 100%;
   }
   .calculator {
     padding: 90px 0;
@@ -2633,7 +2661,7 @@ footer {
     max-height: 0px;
     transition: all 0.8s ease;
   }
-  .about-right__text.not-mob-active.active {
+  .about-right__text.not-mob-active.activet {
     max-height: 300px;
   }
   .about-right__text.not-mob-active:last-child {
@@ -2657,7 +2685,7 @@ footer {
     overflow: hidden;
     transition: all 0.4s ease;
   }
-  .mob-btn-more-text.active {
+  .mob-btn-more-text.activet {
     height: 0;
     opacity: 0;
   }
@@ -2740,11 +2768,14 @@ footer {
     width: 100%;
   }
   .price__wraper {
+    display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
   }
   .price-card {
     margin-bottom: 20px;
+    margin-right: 0;
   }
   .price-card:last-child {
     margin-bottom: 0;
@@ -2792,5 +2823,14 @@ footer {
   }
   footer {
     padding-bottom: 90px;
+  }
+  .top-bg-block {
+    padding: 55px 0;
+  }
+  .mob-flex {
+    display: flex;
+  }
+  .mfl {
+    margin-right: 37px;
   }
 }/*# sourceMappingURL=style.css.map */
