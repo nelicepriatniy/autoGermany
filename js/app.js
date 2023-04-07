@@ -365,38 +365,57 @@ buttoncalc.onclick = ()=>{
         } else (
             var2 = priceNum/100*35
         )
+        console.log(1)
+        console.log("obem = " + obemNum)
     } else if (yearNum == 2) {
         if(obemNum <= 1) {
-            var2 = obemNum*1000*1.5
+            var2 = (obemNum*1000*1.5)/2 + 1900
+            console.log("obemNum <= 1")
         } else if(obemNum >= 1 && obemNum <= 1.5) {
-            var2 = obemNum*1000*1.7
+            var2 = (obemNum*1000*1.7)
+            console.log("obemNum >= 1 && obemNum <= 1.5")
         } else if(obemNum >= 1.5 && obemNum <= 1.8) {
-            var2 = obemNum*1000*2.5
+            var2 = (obemNum*1000*2.5)
+            console.log("obemNum >= 1.5 && obemNum <= 1.8")
         } else if(obemNum >= 1.8 && obemNum <= 2.3) {
-            var2 = obemNum*1000*2.7
+            var2 = (obemNum*1000*2.7)
+            console.log("obemNum >= 1.8 && obemNum <= 2.3")
         } else if(obemNum >= 2.3 && obemNum <= 3) {
-            var2 = obemNum*1000*3
+            var2 = (obemNum*1000*3)
+            console.log("emNum >= 2.3 && obemNum <= 3")
+            
         } else if(obemNum > 3) {
-            var2 = obemNum*1000*3.6
+            var2 = (obemNum*1000*3.6)
+            console.log("obemNum > 3")
         }
+        console.log(2)
     } else if (yearNum == 3) {
         if(obemNum <= 1) {
-            var2 = obemNum*1000*3
+            var2 = (obemNum*1000*3)
         } else if(obemNum >= 1 && obemNum <= 1.5) {
-            var2 = obemNum*1000*3.2
+            var2 = (obemNum*1000*3.2)
         } else if(obemNum >= 1.5 && obemNum <= 1.8) {
-            var2 = obemNum*1000*3.5
+            var2 = (obemNum*1000*3.5)
         } else if(obemNum >= 1.8 && obemNum <= 2.3) {
-            var2 = obemNum*1000*4.8
+            var2 = (obemNum*1000*4.8)
         } else if(obemNum >= 2.3 && obemNum <= 3) {
-            var2 = obemNum*1000*5
+            var2 = (obemNum*1000*5)
         } else if(obemNum > 3) {
-            var2 = obemNum*1000*5.7
+            var2 = (obemNum*1000*5.7)
         }
+        console.log(3)
     }
-    let var3 = var1 +var2;
+    let var3 = 0;
 
-    let sum = Math.floor(var1 + var2 + var3);
+    if (variantCalcInpValue == 1) {
+        // var3 = var1 +var2;
+
+    } else {
+        var2 = var2/2 + 1900
+    }
+    console.log('переменная 1 = ' + var1 + "переменная 2 = " + var2 + "переменная 3 = " + var3)
+
+    let sum = Math.floor((var1 + var2 + var3 + 6000) * 88.9);
 
     
     console.log("var1 = " + var1)
@@ -412,6 +431,7 @@ buttoncalc.onclick = ()=>{
 
 let tabBtns = document.querySelectorAll('[data-sprostab]')
 let lapSlides = document.querySelectorAll('.lap-slider-tabs')
+let deskSlides = document.querySelectorAll('.top-spros__tabContainer')
 
 tabBtns.forEach(el=>{
     el.onclick = ()=>{
@@ -419,6 +439,9 @@ tabBtns.forEach(el=>{
         let block = document.querySelectorAll('#'+blockId)
         console.log(block)
         lapSlides.forEach(el=>{
+            el.classList.remove('visible')
+        })
+        deskSlides.forEach(el=>{
             el.classList.remove('visible')
         })
         block.forEach(el=>{
