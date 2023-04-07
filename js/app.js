@@ -416,14 +416,25 @@ buttoncalc.onclick = ()=>{
     console.log('переменная 1 = ' + var1 + "переменная 2 = " + var2 + "переменная 3 = " + var3)
 
     let sum = Math.floor((var1 + var2 + var3 + 6000) * 88.9);
+    let sumstr = String(sum);
 
     
     console.log("var1 = " + var1)
     console.log("var2 = " + var2)
     console.log("var3 = " + var3)
 
+    // function triades(n){
+    //     var x=parseInt(n,10).toString();
+    //     var r=/(\d+)(\d{3})/;
+    //     while(r.test(x)){
+    //       x=x.replace(r,'$1 $2');
+    //     };
+    //     return x.split(' ');
+    //   }
 
-    pricewcalcIn.innerHTML = sum;
+
+    pricewcalcIn.innerHTML = sumstr.split( /(?=(?:\d{3})+(?!\d))/ ); // [1, 234, 567, 890];
+    // pricewcalcIn.innerHTML = triades(sumstr);
 
 }
 
@@ -440,15 +451,23 @@ tabBtns.forEach(el=>{
         console.log(block)
         lapSlides.forEach(el=>{
             el.classList.remove('visible')
+            el.activeIndex = 1;
+            numSlide.innerHTML = 1;
         })
         deskSlides.forEach(el=>{
             el.classList.remove('visible')
+            el.activeIndex = 1;
+            numSlide.innerHTML = 1;
         })
         block.forEach(el=>{
             el.classList.add('visible')
+            el.activeIndex = 1;
+            numSlide.innerHTML = 1;
         })
         tabBtns.forEach(elem=>{
             elem.classList.remove('active')
+            el.activeIndex = 1;
+            numSlide.innerHTML = 1;
         })
         el.classList.add('active')
     }
