@@ -353,6 +353,7 @@ header.active {
   transition: all 0.25s ease-out;
   background: #1B69D3;
   display: block;
+  margin-top: 7px;
 }
 .header__menu__item:hover::after {
   width: 42px;
@@ -533,6 +534,13 @@ header.active {
 
 .burgerWraper__img {
   cursor: pointer;
+}
+.burgerWraper__img:hover path {
+  fill: #1B3CC8;
+}
+.burgerWraper__img path {
+  fill: #1B69D3;
+  transition: all 0.4s;
 }
 
 .top {

@@ -395,6 +395,7 @@ header {
         transition: all .25s ease-out;
         background: $Main;
         display: block;
+        margin-top: 7px;
     }
     &:hover{
         &::after {
@@ -595,6 +596,15 @@ header {
 
 .burgerWraper__img {
     cursor: pointer;
+    &:hover {
+        & path {
+            fill: $Hover;
+        }
+    }
+    & path {
+        fill: $Main;
+        transition: all .4s;
+    }
 }
 
 
