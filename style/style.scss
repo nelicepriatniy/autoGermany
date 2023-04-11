@@ -384,6 +384,7 @@ header {
     color: $Text-White-300;
     margin: 0 40px 0 0;
     cursor: pointer;
+    padding-top: 10px;
 
     &:last-child {
         margin: 0;
@@ -611,7 +612,7 @@ header {
 
 .top {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 210px;
     overflow: hidden;
 }
