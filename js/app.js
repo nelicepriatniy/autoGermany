@@ -423,15 +423,6 @@ buttoncalc.onclick = ()=>{
     console.log("var2 = " + var2)
     console.log("var3 = " + var3)
 
-    // function triades(n){
-    //     var x=parseInt(n,10).toString();
-    //     var r=/(\d+)(\d{3})/;
-    //     while(r.test(x)){
-    //       x=x.replace(r,'$1 $2');
-    //     };
-    //     return x.split(' ');
-    //   }
-
 
     pricewcalcIn.innerHTML = sumstr.split( /(?=(?:\d{3})+(?!\d))/ ); // [1, 234, 567, 890];
     // pricewcalcIn.innerHTML = triades(sumstr);

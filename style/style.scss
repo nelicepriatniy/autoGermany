@@ -156,8 +156,7 @@ h1 {
     }
 }
 
-.button,
-.button-mob {
+.button {
     font-family: 'Onest';
     font-style: normal;
     font-weight: 500;
@@ -346,7 +345,9 @@ header {
     left: 0;
     width: 100vw;
     z-index: 98;
-    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    height: 90px;
     background: rgba(0, 0, 0, 0.15);
     transition: all .4s ease;
     transform: translateY(-110%);
@@ -381,27 +382,52 @@ header {
     text-align: center;
     text-transform: uppercase;
     color: $Text-White-300;
-    margin: 0 30px 0 0;
+    margin: 0 40px 0 0;
     cursor: pointer;
 
     &:last-child {
         margin: 0;
     }
+    &::after {
+        content: '';
+        height: 3px;
+        width: 0px;
+        transition: all .25s ease-out;
+        background: $Main;
+        display: block;
+    }
+    &:hover{
+        &::after {
+            width: 42px;
+        }
+    }
 }
 
 .header__menu {
-    margin: 0 109px 0 0;
+    margin: 0 110px 0 0;
     display: flex;
 }
 
 .header__wpButton {
     border: 1px solid #FAFAFA;
     border-radius: 4px;
-    padding: 8px 16px 8px 8px;
+    // padding: 8px 16px 8px 8px;
     display: flex;
     align-items: center;
     margin: 0 20px 0 0;
+    width: 126px;
+    height: 41px;
     cursor: pointer;
+    padding-left: 10px;
+    & path {
+        fill: $Text-White-500;
+        transition: all .2s ease;
+    }
+    &:hover {
+        & path {
+            fill: $Main
+        }
+    }
 
     & p {
         font-family: 'Onest';
@@ -411,16 +437,28 @@ header {
         line-height: 125%;
         color: $Text-White-500;
         margin: 0 0 0 9px;
+        width: 69px;
+        height: 18px;
+        padding-top: 1px;
     }
 }
 
 .header__wpButton__wpLogo {
-    height: 21px;
-    width: 21px;
+    height: 25px;
+    width: 25px;
+    & path {
+        fill: $Text-White-500;
+        transition: all .4s ease;
+    }
+    &:hover {
+        & path {
+            fill: $Main
+        }
+    }
 }
 
 .header__phone {
-    margin-right: 47px;
+    margin-right: 40px;
 }
 
 .header__phone__phone {
@@ -446,6 +484,15 @@ header {
     height: 55px;
     width: 55px;
     cursor: pointer;
+    &:hover {
+        & path {
+            fill: $Hover;
+        }
+    }
+    & path {
+        fill: $Main;
+        transition: all 0.4s ease;
+    }
 }
 
 .headerMenu {
@@ -457,7 +504,7 @@ header {
     width: 580px;
     z-index: 99;
     transform: translateX(100%);
-    transition: all 2s;
+    transition: all .4s ease-out;
 
     &.active {
         transform: translateX(0);
@@ -533,13 +580,16 @@ header {
     width: 100vw;
     height: 100vh;
     background: #13161B;
-    opacity: 0.8;
-    transform: translateX(100%);
-    transition: all 2s ease;
+    opacity: 0;
+    // transform: translateX(100%);
+    transition: all .4s;
     z-index: 98;
+    visibility: hidden;
 
     &.active {
         transform: translateX(0);
+        visibility: visible;
+        opacity: .8;
     }
 }
 
@@ -552,12 +602,13 @@ header {
 .top {
     width: 100vw;
     height: 100vh;
-    padding-top: 170px;
+    padding-top: 210px;
+    overflow: hidden;
 }
 
 .top__bg {
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -676,17 +727,18 @@ header {
     z-index: 2;
     margin-left: 20px;
     width: 320px;
+    width: 320px;
+    height: 65px;
 
     &.arr {
-        padding: 19px 23px;
-
-        &::after {
-            margin-left: 10px;
-        }
+        padding: 0;
+        padding-left: 20px;
+        align-items: center;
 
         &:hover {
+            padding-right: 0;
             &::after {
-                margin-left: 17px;
+                margin-left: 30px;
             }
         }
     }
@@ -705,6 +757,8 @@ header {
     color: $Text-White-500;
     background: #2C323D;
     border-radius: 8px;
+    width: 275px;
+    height: 187px;
 }
 
 .topBtm__item__line {
@@ -720,7 +774,7 @@ header {
 }
 
 .topBtm__item__text {
-    width: 235px;
+    width: 240px;
 }
 
 .top-spros {
@@ -2034,7 +2088,7 @@ footer {
         top: 0;
         left: calc(((-100vw + 600px) / 2));
         min-width: auto;
-        max-width: 100vw;
+        // max-width: 100vw;
         min-height: 100%;
         z-index: -1;
     }
@@ -2371,6 +2425,7 @@ footer {
     .as-slide__img {
         width: 100%;
         height: auto;
+        aspect-ratio: 3/2;
     }
 
     .as-slide-half {
@@ -2546,6 +2601,50 @@ footer {
 }
 
 @media (max-width: 600px) {
+    
+.button,
+.button-mob {
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: $Text-White-500;
+    padding: 20px 57px;
+    background: $Main;
+    border-radius: 4px;
+
+    &.arr {
+        display: flex;
+        align-items: center;
+        padding: 18px 32px;
+
+        &::after {
+            content: url(./../assets/icons/button-arr.svg);
+            display: block;
+            height: 27px;
+            width: 18px;
+            margin: 0 0 0 26px;
+            transition: all .4s ease;
+        }
+    }
+
+    transition: all .4s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: $Hover;
+
+        &.arr {
+            padding-right: 26px;
+
+            &::after {
+                margin: 0 0 0 32px;
+            }
+        }
+    }
+}
 
     .desk,
     .lap {
@@ -2850,6 +2949,7 @@ footer {
     .top-spros-card__top {
         width: 100%;
         height: auto;
+        aspect-ratio: 16/9;
     }
 
     .top-spros-card-deal {
