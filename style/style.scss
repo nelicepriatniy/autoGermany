@@ -1585,6 +1585,7 @@ select:focus {
     justify-content: space-between;
     align-items: center;
     margin-top: 60px;
+    border-radius: 8px;
 }
 
 .act-sale__tg__text {
@@ -1739,8 +1740,8 @@ select:focus {
 
 .price-arr {
     position: absolute;
-    top: 320px;
-    left: 976px;
+    top: 180px;
+    left: 756px;
     z-index: 4;
 }
 
@@ -2270,6 +2271,10 @@ label {
         visibility: visible;
         height: auto;
     }
+}
+
+.price-container {
+    position: relative;
 }
 
 @media (max-width: 1161px) {
