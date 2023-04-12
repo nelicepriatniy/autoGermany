@@ -11,6 +11,12 @@
 }
 
 @font-face {
+    font-family: 'Onest';
+    src: url(./../assets/fonts/Onest-Bold.woff2);
+    font-weight: 700;
+}
+
+@font-face {
     font-family: 'Supermolot Light';
     src: url(./../assets/fonts/Supermolot-Light.otf);
     font-weight: 400;
@@ -130,7 +136,7 @@ h1 {
         align-items: center;
         padding: 19px 32px;
 
-        &::after {
+        & .after {
             content: url(./../assets/icons/button-arr.svg);
             display: block;
             height: 27px;
@@ -149,7 +155,7 @@ h1 {
         &.arr {
             padding-right: 26px;
 
-            &::after {
+            & .after {
                 margin: 0 0 0 32px;
             }
         }
@@ -173,7 +179,7 @@ h1 {
         align-items: center;
         padding: 18px 32px;
 
-        &::after {
+        & .after {
             content: url(./../assets/icons/button-arr.svg);
             display: block;
             height: 27px;
@@ -192,14 +198,14 @@ h1 {
         &.arr {
             padding-right: 26px;
 
-            &::after {
+            & .after {
                 margin: 0 0 0 32px;
             }
         }
     }
 }
 
-.little-button, .mob-little-button {
+.little-button {
     font-family: 'Onest';
     font-style: normal;
     font-weight: 500;
@@ -216,7 +222,7 @@ h1 {
         align-items: center;
         padding: 15px 24px;
 
-        &::after {
+        & .after {
             content: url(./../assets/icons/Vector.svg);
             display: block;
             height: 15px;
@@ -235,7 +241,7 @@ h1 {
         &.arr {
             padding-right: 20px;
 
-            &::after {
+            & .after {
                 margin: 0 0 0 24px;
             }
         }
@@ -248,7 +254,7 @@ h1 {
     transition: 1.2s ease;
 }
 
-.h1-animate {
+.h1-animate, .h2-animate {
     transform: translateY(-25px);
     opacity: 0;
     &.active {
@@ -288,7 +294,7 @@ h1 {
 }
 
 .img-animate {
-    scale: .5;
+    // scale: .5;
     opacity: 0;
     transition-delay: .4s;
     &.active {
@@ -613,9 +619,20 @@ header {
 .top {
     width: 100vw;
     min-height: 100vh;
-    padding-top: 160px;
+    // min-height: 100vh;
+    padding-top: 170px;
     overflow: hidden;
-    padding-bottom: 133px;
+    position: relative;
+    // padding-bottom: 133px;
+}
+
+.top-bg-wraper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .top__bg {
@@ -831,6 +848,7 @@ header {
     margin-right: 10px;
     cursor: pointer;
     background: $Secondary1;
+    transition: all .4s ease;
 
     &:last-child {
         margin-right: 0;
@@ -838,6 +856,10 @@ header {
 
     &.active {
         background: $Main;
+    }
+    
+    &:hover {
+        background: $Hover;
     }
 }
 
@@ -1087,6 +1109,32 @@ label {
 
 .select {
     color: $Text-White-300;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+}
+
+select {
+	/* for Firefox */
+	-moz-appearance: none;
+	/* for Chrome */
+	-webkit-appearance: none;
+}
+select::-ms-expand {
+	/* IE */
+	display: none;
+}
+
+.select-svg {
+    transition: all .4s ease;
+}
+
+select:focus {
+    & .select-svg {
+        transform: rotate(180deg);
+        & path {
+            fill: $Main;
+        }
+    }
 }
 
 .calc-btn {
@@ -1127,7 +1175,7 @@ label {
 .calc-right__tg__text {
     color: $Text-White-500;
     margin-bottom: 30px;
-    width: 380px;
+    width: 370px;
 }
 
 .seti-button {
@@ -1378,12 +1426,20 @@ label {
     border: 1px solid #D9D9D9;
 
     &:hover {
-        background: none;
+        background: $Hover;
+        border: 1px solid $Hover;
+        
     }
 
     &.light {
         color: $Secondary1;
         border: 1px solid #2C323D;
+
+        &:hover {
+            background: $Hover;
+            border: 1px solid $Hover;
+            color: $Text-White-500;
+        }
     }
 }
 
@@ -1481,9 +1537,15 @@ label {
     text-align: center;
     color: $Secondary1;
     margin-bottom: 6px;
+    transition: all .4s ease;
 
     &:last-child {
         margin-bottom: 0;
+    }
+    &:hover {
+        background: $Hover;
+        color: $Text-White-500;
+        border-color: $Hover;
     }
 }
 
@@ -1686,7 +1748,8 @@ label {
     position: relative;
     display: flex;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
+    padding: 140px 0;
 }
 
 .last-wraper {
@@ -1753,6 +1816,8 @@ label {
 .last-left__button {
     border: 1px solid #FAFAFA;
     border-radius: 4px;
+    color: white;
+    margin: 0;
 
 }
 
@@ -1816,10 +1881,33 @@ label {
     height: 55px;
     padding: 15px 20px;
     background: none;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
     color: white;
     &:last-child {
+        margin-top: 16px;
         margin-bottom: 8px;
+    }
+    &:first-child {
+        margin-bottom: 16px;
+    }
+    &:nth-child(4) {
+        margin-bottom: 8px;
+    }
+    &::-webkit-input-placeholder {
+        opacity: .6;
+        color: white;
+    }
+    &::-moz-placeholder          {
+        opacity: .6;
+        color: white;
+    }/* Firefox 19+ */
+    &:-moz-placeholder           {
+        opacity: .6;
+        color: white;
+    }/* Firefox 18- */
+    &:-ms-input-placeholder      {
+        opacity: .6;
+        color: white;
     }
 }
 
@@ -2043,7 +2131,190 @@ footer {
     align-items: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1B69D3;
+}
+
+.zakazat {
+    width: 250px;
+    height: 58px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.podbor {
+    width: 300px;
+    height: 58px;
+    // align-items: center;
+    // justify-content: center;
+    &.arr {
+        padding: 0;
+        padding-left: 32px;
+        & .after {
+            width: 12px;
+            height: 18px;
+            display: block;
+            margin-left: 24px;
+        }
+
+    }
+    &:hover {
+        &.arr {
+            padding: 0;
+            padding-left: 32px;
+        }
+    }
+}
+
+.year-calc-lab {
+    position: absolute;
+    right: 65px;
+    top: 333px;
+}
+
+#year-calc + label {
+    // transform: rotate(180deg);
+    transition: all .4s ease;
+    & path {
+        fill: $Text-White-500;
+        transition: all .4s ease;
+    }
+
+}
+
+#year-calc:focus + label {
+    transform: rotate(180deg);
+    & path {
+        fill: $Main;
+    }
+
+}
+
+#variant-calc:focus + label {
+    transform: rotate(180deg);
+    & path {
+        fill: $Main;
+    }
+
+}
+
+label {
+    transition: all .4s ease;
+}
+
+#obem-calc:focus + label {
+    transform: rotate(180deg);
+    transition: all .4s ease;
+    & path {
+        fill: $Main;
+        transition: all .4s ease;
+    }
+
+}
+
+.obem-calc-lab, .variant-calc-lab {
+    & path {
+        fill: $Text-White-500;
+        transition: all .4s ease;
+    }
+} 
+
+.obem-calc-lab {
+    position: absolute;
+    top: 435px;
+    right: 65px;
+}
+
+.variant-calc-lab {
+    position: absolute;
+    top: 537px;
+    right: 65px;
+
+}
+
+.tg-button {
+    padding: 10px 16px 10px 15px;
+    font-size: 18px;
+}
+
+#phone {
+    &.notRew {
+        border-color: #EB5757;
+    }
+}
+
+.rewText {
+    color: #EB5757;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: all .4s ease;
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 135%;
+    /* or 16px */
+    margin-bottom: 16px;
+    &.notRew {
+        visibility: visible;
+        height: auto;
+    }
+}
+
 @media (max-width: 1161px) {
+    .little-button, .mob-little-button {
+        font-family: 'Onest';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        text-align: center;
+        color: $Text-White-500;
+        background: $Main;
+        border-radius: 4px;
+        padding: 15px 24px;
+    
+        &.arr {
+            display: flex;
+            align-items: center;
+            padding: 15px 24px;
+    
+            & .after {
+                content: url(./../assets/icons/Vector.svg);
+                display: block;
+                height: 15px;
+                width: 10px;
+                margin: 0 0 0 20px;
+                transition: all .4s ease;
+            }
+        }
+    
+        transition: all .4s ease;
+        cursor: pointer;
+    
+        &:hover {
+            background: $Hover;
+    
+            &.arr {
+                padding-right: 20px;
+    
+                & .after {
+                    margin: 0 0 0 24px;
+                }
+            }
+        }
+    }
 
     .text,
     .lap-text {

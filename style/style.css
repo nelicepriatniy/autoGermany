@@ -10,6 +10,11 @@
   font-weight: 400;
 }
 @font-face {
+  font-family: "Onest";
+  src: url(./../assets/fonts/Onest-Bold.woff2);
+  font-weight: 700;
+}
+@font-face {
   font-family: "Supermolot Light";
   src: url(./../assets/fonts/Supermolot-Light.otf);
   font-weight: 400;
@@ -117,7 +122,7 @@ h1 {
   align-items: center;
   padding: 19px 32px;
 }
-.big-button.arr::after {
+.big-button.arr .after {
   content: url(./../assets/icons/button-arr.svg);
   display: block;
   height: 27px;
@@ -131,7 +136,7 @@ h1 {
 .big-button:hover.arr {
   padding-right: 26px;
 }
-.big-button:hover.arr::after {
+.big-button:hover.arr .after {
   margin: 0 0 0 32px;
 }
 
@@ -154,7 +159,7 @@ h1 {
   align-items: center;
   padding: 18px 32px;
 }
-.button.arr::after {
+.button.arr .after {
   content: url(./../assets/icons/button-arr.svg);
   display: block;
   height: 27px;
@@ -168,11 +173,11 @@ h1 {
 .button:hover.arr {
   padding-right: 26px;
 }
-.button:hover.arr::after {
+.button:hover.arr .after {
   margin: 0 0 0 32px;
 }
 
-.little-button, .mob-little-button {
+.little-button {
   font-family: "Onest";
   font-style: normal;
   font-weight: 500;
@@ -186,12 +191,12 @@ h1 {
   transition: all 0.4s ease;
   cursor: pointer;
 }
-.little-button.arr, .mob-little-button.arr {
+.little-button.arr {
   display: flex;
   align-items: center;
   padding: 15px 24px;
 }
-.little-button.arr::after, .mob-little-button.arr::after {
+.little-button.arr .after {
   content: url(./../assets/icons/Vector.svg);
   display: block;
   height: 15px;
@@ -199,13 +204,13 @@ h1 {
   margin: 0 0 0 20px;
   transition: all 0.4s ease;
 }
-.little-button:hover, .mob-little-button:hover {
+.little-button:hover {
   background: #1B3CC8;
 }
-.little-button:hover.arr, .mob-little-button:hover.arr {
+.little-button:hover.arr {
   padding-right: 20px;
 }
-.little-button:hover.arr::after, .mob-little-button:hover.arr::after {
+.little-button:hover.arr .after {
   margin: 0 0 0 24px;
 }
 
@@ -213,11 +218,11 @@ h1 {
   transition: 1.2s ease;
 }
 
-.h1-animate {
+.h1-animate, .h2-animate {
   transform: translateY(-25px);
   opacity: 0;
 }
-.h1-animate.active {
+.h1-animate.active, .h2-animate.active {
   transform: translateY(0);
   opacity: 1;
 }
@@ -252,7 +257,6 @@ h1 {
 }
 
 .img-animate {
-  scale: 0.5;
   opacity: 0;
   transition-delay: 0.4s;
 }
@@ -547,9 +551,18 @@ header.active {
 .top {
   width: 100vw;
   min-height: 100vh;
-  padding-top: 160px;
+  padding-top: 170px;
   overflow: hidden;
-  padding-bottom: 133px;
+  position: relative;
+}
+
+.top-bg-wraper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .top__bg {
@@ -754,12 +767,16 @@ header.active {
   margin-right: 10px;
   cursor: pointer;
   background: #2C323D;
+  transition: all 0.4s ease;
 }
 .tab-btn:last-child {
   margin-right: 0;
 }
 .tab-btn.active {
   background: #1B69D3;
+}
+.tab-btn:hover {
+  background: #1B3CC8;
 }
 
 .tab-btn__text {
@@ -998,6 +1015,31 @@ label {
 
 .select {
   color: #D9D9D9;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  /* IE */
+  display: none;
+}
+
+.select-svg {
+  transition: all 0.4s ease;
+}
+
+select:focus .select-svg {
+  transform: rotate(180deg);
+}
+select:focus .select-svg path {
+  fill: #1B69D3;
 }
 
 .calc-btn {
@@ -1037,7 +1079,7 @@ label {
 .calc-right__tg__text {
   color: #FAFAFA;
   margin-bottom: 30px;
-  width: 380px;
+  width: 370px;
 }
 
 .seti-button {
@@ -1275,11 +1317,17 @@ label {
   border: 1px solid #D9D9D9;
 }
 .as-slide-white-button:hover {
-  background: none;
+  background: #1B3CC8;
+  border: 1px solid #1B3CC8;
 }
 .as-slide-white-button.light {
   color: #2C323D;
   border: 1px solid #2C323D;
+}
+.as-slide-white-button.light:hover {
+  background: #1B3CC8;
+  border: 1px solid #1B3CC8;
+  color: #FAFAFA;
 }
 
 .puggin {
@@ -1376,9 +1424,15 @@ label {
   text-align: center;
   color: #2C323D;
   margin-bottom: 6px;
+  transition: all 0.4s ease;
 }
 .seti-slider:last-child {
   margin-bottom: 0;
+}
+.seti-slider:hover {
+  background: #1B3CC8;
+  color: #FAFAFA;
+  border-color: #1B3CC8;
 }
 
 .seti-slider__img {
@@ -1570,7 +1624,7 @@ label {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100vh;
+  padding: 140px 0;
 }
 
 .last-wraper {
@@ -1636,6 +1690,8 @@ label {
 .last-left__button {
   border: 1px solid #FAFAFA;
   border-radius: 4px;
+  color: white;
+  margin: 0;
 }
 
 .last-left__geo {
@@ -1693,11 +1749,35 @@ label {
   height: 55px;
   padding: 15px 20px;
   background: none;
-  margin-bottom: 16px;
   color: white;
+  /* Firefox 19+ */
+  /* Firefox 18- */
 }
 .last-form-inp:last-child {
+  margin-top: 16px;
   margin-bottom: 8px;
+}
+.last-form-inp:first-child {
+  margin-bottom: 16px;
+}
+.last-form-inp:nth-child(4) {
+  margin-bottom: 8px;
+}
+.last-form-inp::-webkit-input-placeholder {
+  opacity: 0.6;
+  color: white;
+}
+.last-form-inp::-moz-placeholder {
+  opacity: 0.6;
+  color: white;
+}
+.last-form-inp:-moz-placeholder {
+  opacity: 0.6;
+  color: white;
+}
+.last-form-inp:-ms-input-placeholder {
+  opacity: 0.6;
+  color: white;
 }
 
 .button-last-form {
@@ -1903,7 +1983,168 @@ footer {
   align-items: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #1B69D3;
+}
+
+.zakazat {
+  width: 250px;
+  height: 58px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.podbor {
+  width: 300px;
+  height: 58px;
+}
+.podbor.arr {
+  padding: 0;
+  padding-left: 32px;
+}
+.podbor.arr .after {
+  width: 12px;
+  height: 18px;
+  display: block;
+  margin-left: 24px;
+}
+.podbor:hover.arr {
+  padding: 0;
+  padding-left: 32px;
+}
+
+.year-calc-lab {
+  position: absolute;
+  right: 65px;
+  top: 333px;
+}
+
+#year-calc + label {
+  transition: all 0.4s ease;
+}
+#year-calc + label path {
+  fill: #FAFAFA;
+  transition: all 0.4s ease;
+}
+
+#year-calc:focus + label {
+  transform: rotate(180deg);
+}
+#year-calc:focus + label path {
+  fill: #1B69D3;
+}
+
+#variant-calc:focus + label {
+  transform: rotate(180deg);
+}
+#variant-calc:focus + label path {
+  fill: #1B69D3;
+}
+
+label {
+  transition: all 0.4s ease;
+}
+
+#obem-calc:focus + label {
+  transform: rotate(180deg);
+  transition: all 0.4s ease;
+}
+#obem-calc:focus + label path {
+  fill: #1B69D3;
+  transition: all 0.4s ease;
+}
+
+.obem-calc-lab path, .variant-calc-lab path {
+  fill: #FAFAFA;
+  transition: all 0.4s ease;
+}
+
+.obem-calc-lab {
+  position: absolute;
+  top: 435px;
+  right: 65px;
+}
+
+.variant-calc-lab {
+  position: absolute;
+  top: 537px;
+  right: 65px;
+}
+
+.tg-button {
+  padding: 10px 16px 10px 15px;
+  font-size: 18px;
+}
+
+#phone.notRew {
+  border-color: #EB5757;
+}
+
+.rewText {
+  color: #EB5757;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  /* or 16px */
+  margin-bottom: 16px;
+}
+.rewText.notRew {
+  visibility: visible;
+  height: auto;
+}
+
 @media (max-width: 1161px) {
+  .little-button, .mob-little-button {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    text-align: center;
+    color: #FAFAFA;
+    background: #1B69D3;
+    border-radius: 4px;
+    padding: 15px 24px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .little-button.arr, .mob-little-button.arr {
+    display: flex;
+    align-items: center;
+    padding: 15px 24px;
+  }
+  .little-button.arr .after, .mob-little-button.arr .after {
+    content: url(./../assets/icons/Vector.svg);
+    display: block;
+    height: 15px;
+    width: 10px;
+    margin: 0 0 0 20px;
+    transition: all 0.4s ease;
+  }
+  .little-button:hover, .mob-little-button:hover {
+    background: #1B3CC8;
+  }
+  .little-button:hover.arr, .mob-little-button:hover.arr {
+    padding-right: 20px;
+  }
+  .little-button:hover.arr .after, .mob-little-button:hover.arr .after {
+    margin: 0 0 0 24px;
+  }
   .text,
   .lap-text {
     font-family: "Onest";

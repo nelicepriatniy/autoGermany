@@ -423,8 +423,16 @@ buttoncalc.onclick = ()=>{
     console.log("var2 = " + var2)
     console.log("var3 = " + var3)
 
+    sumstr = sumstr
+  .toString()
+  .replace(
+    /(\d{3})+$/,
+    (g, g1, i) => (i ? " " : "") + g.match(/.{3}/g).join(" ")
+  )
 
-    pricewcalcIn.innerHTML = sumstr.split( /(?=(?:\d{3})+(?!\d))/ ); // [1, 234, 567, 890];
+
+    // pricewcalcIn.innerHTML = sumstr.split( /(?=(?:\d{3})+(?!\d))/ ) + ' ₽'; // [1, 234, 567, 890];
+    pricewcalcIn.innerHTML = sumstr + ' ₽'; // [1, 234, 567, 890];
     // pricewcalcIn.innerHTML = triades(sumstr);
 
 }
@@ -463,3 +471,25 @@ tabBtns.forEach(el=>{
         el.classList.add('active')
     }
 })
+
+let calcOption = document.querySelectorAll('option')
+
+$(function(){
+    //2. Получить элемент, к которому необходимо добавить маску
+    $("#phone").mask("+7(999) 999-9999");
+});
+
+//добавление класса
+
+let phoneInput = document.querySelector('#phone')
+let lastButton = document.querySelector('.button-last-form')
+let lastInp = document.querySelector('.rewText');
+
+lastButton.onclick = ()=>{
+    if (phoneInput.value == false) {
+        phoneInput.classList.add('notRew')
+        lastInp.classList.add('notRew')
+    } else {
+        // console.log(321)
+    }
+}
