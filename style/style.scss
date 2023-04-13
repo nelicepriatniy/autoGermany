@@ -1193,8 +1193,15 @@ select:focus {
     background: $Text-White-500;
     color: $Text-Black-500;
     font-weight: 500;
-    width: fit-content;
     padding: 10px 15px;
+    // width: 290px;
+    width: fit-content;
+    padding: 0;
+    height: 60px;
+    padding-left: 12px;
+    padding-right: 16px;
+    white-space: nowrap;
+
 
     &::after {
         content: url(./../assets/icons/btn-seti-hover.svg);
@@ -1203,21 +1210,23 @@ select:focus {
         height: 18px;
         width: 0;
         transition: all .4s ease;
-        margin-left: 8px;
     }
 
     &:hover {
         background: $Text-White-500;
+        // width: 302px;
+        // padding-right: 16px;
 
         &::after {
             width: 12px;
+            margin-left: 8px;
         }
 
     }
 }
 
 .btn-seti__img {
-    margin-right: 5px;
+    margin-right: 8+px;
 }
 
 .calc-right__wp {
@@ -1277,6 +1286,7 @@ select:focus {
 .about-left__text {
     color: $Text-White-500;
     margin-bottom: 60px;
+    width: 469px;
 }
 
 .about-left__cards {
@@ -1955,6 +1965,9 @@ select:focus {
         position: absolute;
         z-index: 4;
         opacity: 0;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &.active {
@@ -2252,11 +2265,6 @@ label {
 
 }
 
-.tg-button {
-    padding: 10px 16px 10px 15px;
-    font-size: 18px;
-}
-
 #phone {
     &.notRew {
         border-color: #EB5757;
@@ -2284,6 +2292,33 @@ label {
 
 .price-container {
     position: relative;
+}
+
+#cena-calc {
+    margin-bottom: 0;
+    transition: all .4s ease;
+    &.redFlag {
+        // height: 10px;
+        border-color: #EB5757;
+
+    }
+}
+
+.pricevaluered {
+    margin-bottom: 16px;
+    height: 0;
+    overflow: hidden;
+    font-family: 'Onest';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 135%;
+    color: #EB5757;
+    
+    &.redFlag {
+        height: auto;
+
+    }
 }
 
 @media (max-width: 1161px) {

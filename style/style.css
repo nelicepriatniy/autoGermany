@@ -1097,9 +1097,14 @@ select:focus .select-svg path {
   background: #FAFAFA;
   color: #0F0F0F;
   font-weight: 500;
+  padding: 10px 15px;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px 15px;
+  padding: 0;
+  height: 60px;
+  padding-left: 12px;
+  padding-right: 16px;
+  white-space: nowrap;
 }
 .seti-button::after {
   content: url(./../assets/icons/btn-seti-hover.svg);
@@ -1108,17 +1113,17 @@ select:focus .select-svg path {
   height: 18px;
   width: 0;
   transition: all 0.4s ease;
-  margin-left: 8px;
 }
 .seti-button:hover {
   background: #FAFAFA;
 }
 .seti-button:hover::after {
   width: 12px;
+  margin-left: 8px;
 }
 
 .btn-seti__img {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 
 .calc-right__wp {
@@ -1178,6 +1183,7 @@ select:focus .select-svg path {
 .about-left__text {
   color: #FAFAFA;
   margin-bottom: 60px;
+  width: 469px;
 }
 
 .about-left__cards {
@@ -1824,6 +1830,9 @@ select:focus .select-svg path {
   position: absolute;
   z-index: 4;
   opacity: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .checklabel.active::after {
   opacity: 1;
@@ -2090,11 +2099,6 @@ label {
   right: 65px;
 }
 
-.tg-button {
-  padding: 10px 16px 10px 15px;
-  font-size: 18px;
-}
-
 #phone.notRew {
   border-color: #EB5757;
 }
@@ -2120,6 +2124,29 @@ label {
 
 .price-container {
   position: relative;
+}
+
+#cena-calc {
+  margin-bottom: 0;
+  transition: all 0.4s ease;
+}
+#cena-calc.redFlag {
+  border-color: #EB5757;
+}
+
+.pricevaluered {
+  margin-bottom: 16px;
+  height: 0;
+  overflow: hidden;
+  font-family: "Onest";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 135%;
+  color: #EB5757;
+}
+.pricevaluered.redFlag {
+  height: auto;
 }
 
 @media (max-width: 1161px) {

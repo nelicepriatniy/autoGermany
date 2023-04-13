@@ -337,6 +337,7 @@ let yearCalcInp  = document.querySelector('#year-calc');
 let obemCalcInp  = document.querySelector('#obem-calc');
 let variantCalcInp  = document.querySelector('#variant-calc');
 let pricewcalcIn = document.querySelector('.calc-price-in');
+let pricevaluered = document.querySelector('.pricevaluered');
 
 buttoncalc.onclick = ()=>{
     let priceCalcInpValue = priceCalcInp.value;
@@ -413,28 +414,37 @@ buttoncalc.onclick = ()=>{
     } else {
         var2 = var2/2 + 1900
     }
-    console.log('переменная 1 = ' + var1 + "переменная 2 = " + var2 + "переменная 3 = " + var3)
 
-    let sum = Math.floor((var1 + var2 + var3 + 6000) * 88.9);
-    let sumstr = String(sum);
-
+    if (priceCalcInpValue == false) {
+        priceCalcInp.classList.add('redFlag');
+        pricevaluered.classList.add('redFlag');
+    } else {
+        priceCalcInp.classList.remove('redFlag');
+        pricevaluered.classList.remove('redFlag');
+        console.log('переменная 1 = ' + var1 + "переменная 2 = " + var2 + "переменная 3 = " + var3)
     
-    console.log("var1 = " + var1)
-    console.log("var2 = " + var2)
-    console.log("var3 = " + var3)
+        let sum = Math.floor((var1 + var2 + var3 + 6000) * 88.9);
+        let sumstr = String(sum);
+    
+        
+        console.log("var1 = " + var1)
+        console.log("var2 = " + var2)
+        console.log("var3 = " + var3)
+    
+        sumstr = sumstr
+      .toString()
+      .replace(
+        /(\d{3})+$/,
+        (g, g1, i) => (i ? " " : "") + g.match(/.{3}/g).join(" ")
+      )
+    
+    
+        // pricewcalcIn.innerHTML = sumstr.split( /(?=(?:\d{3})+(?!\d))/ ) + ' ₽'; // [1, 234, 567, 890];
+        pricewcalcIn.innerHTML = sumstr + ' ₽'; // [1, 234, 567, 890];
+        // pricewcalcIn.innerHTML = triades(sumstr);
+    
 
-    sumstr = sumstr
-  .toString()
-  .replace(
-    /(\d{3})+$/,
-    (g, g1, i) => (i ? " " : "") + g.match(/.{3}/g).join(" ")
-  )
-
-
-    // pricewcalcIn.innerHTML = sumstr.split( /(?=(?:\d{3})+(?!\d))/ ) + ' ₽'; // [1, 234, 567, 890];
-    pricewcalcIn.innerHTML = sumstr + ' ₽'; // [1, 234, 567, 890];
-    // pricewcalcIn.innerHTML = triades(sumstr);
-
+    }
 }
 
 //табы
