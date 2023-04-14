@@ -461,21 +461,25 @@ tabBtns.forEach(el=>{
         lapSlides.forEach(el=>{
             el.classList.remove('visible')
             el.activeIndex = 1;
+            lapTabs.activeIndex = 1;
             numSlide.innerHTML = 1;
         })
         deskSlides.forEach(el=>{
             el.classList.remove('visible')
             el.activeIndex = 1;
+            lapTabs.activeIndex = 1;
             numSlide.innerHTML = 1;
         })
         block.forEach(el=>{
             el.classList.add('visible')
             el.activeIndex = 1;
+            lapTabs.activeIndex = 1;
             numSlide.innerHTML = 1;
         })
         tabBtns.forEach(elem=>{
             elem.classList.remove('active')
             el.activeIndex = 1;
+            lapTabs.activeIndex = 1;
             numSlide.innerHTML = 1;
         })
         el.classList.add('active')

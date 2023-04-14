@@ -2340,7 +2340,7 @@ label {
             padding: 15px 24px;
     
             & .after {
-                content: url(./../assets/icons/Vector.svg);
+                // content: url(./../assets/icons/Vector.svg);
                 display: block;
                 height: 15px;
                 width: 10px;
@@ -2534,7 +2534,7 @@ label {
         position: relative;
         display: flex;
         max-width: 100%;
-        margin-top: 40px;
+        margin-top: 30px;
         position: absolute;
         transition: all .4s ease;
         left: 0;
@@ -2707,15 +2707,19 @@ label {
         font-family: 'Supermolot Light';
         font-style: normal;
         font-weight: 400;
-        font-size: 36px;
+        font-size: 18px;
         line-height: 125%;
         color: #FAFAFA;
-        margin: 0 44px 0 34px;
+        margin: 0 34px 0 34px;
 
         & .zer {
-            font-size: 28px;
+            font-size: 18px;
             color: #A2A3A4;
         }
+    }
+
+    .st-prew, .st-next {
+        height: 20px;
     }
 
     .lap-st-buttons {
@@ -2944,7 +2948,7 @@ label {
     text-align: center;
     color: $Text-White-500;
     padding: 20px 57px;
-    background: $Main;
+    // background: $Main;
     border-radius: 4px;
 
     &.arr {
@@ -2952,8 +2956,8 @@ label {
         align-items: center;
         padding: 18px 32px;
 
-        &::after {
-            content: url(./../assets/icons/button-arr.svg);
+        & .after {
+            // content: url(./../assets/icons/button-arr.svg);
             display: block;
             height: 27px;
             width: 18px;
@@ -3127,20 +3131,35 @@ label {
 
     .top__text {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .top__text__heading {
-        width: 100%;
+        min-width: 300px;
         max-width: 320px;
     }
 
     .topList {
-        width: 100%;
+        min-width: 300px;
         max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topList__item {
+        width: fit-content;
     }
 
     .topList__item p {
         margin-left: 12px;
+        width: 276px;
+    }
+
+    .topList__item:last-child p {
+        width: 276px;
     }
 
     .top__bg {
@@ -3196,6 +3215,7 @@ label {
         width: 100%;
         padding: 20px;
         display: flex;
+        height: fit-content;
     }
 
     .topBtm__item__text {
@@ -3244,6 +3264,12 @@ label {
         overflow-x: scroll;
     }
 
+
+    .top {
+        padding-bottom: 0;
+    }
+
+
     .tab-btn {
         flex-shrink: 0;
         margin-right: 6px;
@@ -3281,7 +3307,7 @@ label {
     .top-spros-card__top {
         width: 100%;
         height: auto;
-        aspect-ratio: 16/9;
+        aspect-ratio: 300/207.56;
     }
 
     .top-spros-card-deal {
@@ -3329,10 +3355,11 @@ label {
 
     .calculator__wraper {
         width: 100%;
+        align-items: center;
     }
 
     .calculator-left {
-        width: 100%;
+        width: 300px;
         padding: 30px 10px;
     }
 
@@ -3576,6 +3603,10 @@ label {
         }
     }
 
+    .about-left__text {
+        width: 100%;
+    }
+
     .last {
         padding: 90px 0;
     }
@@ -3648,6 +3679,76 @@ label {
 
     .mfl {
         margin-right: 37px;
+    }
+
+    .year-calc-lab {
+        right: 25px;
+        top: 300px;
+    }
+
+    .obem-calc-lab {
+        right: 25px;
+        top: 400px;
+    }
+
+    .variant-calc-lab {
+        right: 25px;
+        top: 500px;
+
+    }
+
+    .podbor:hover {
+        background-color: #424B5C;
+    }
+
+    .mob-little-button {
+        font-family: "Onest";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        text-align: center;
+        color: #FAFAFA;
+        background: #1B69D3;
+        border-radius: 4px;
+        // padding: 15px 24px;
+        transition: all 0.4s ease;
+        cursor: pointer;
+    }
+
+    .seti-button {
+        background: $Text-White-500;
+        color: $Text-Black-500;
+        font-size: 15px;
+        &:hover {
+            background: $Text-White-500;
+        }
+    }
+
+    .as-slide-white-button {
+        background: none;
+    }
+
+    .ww__heading {
+        margin-bottom: 60px;
+    }
+
+    .seti-button {
+        background: none;
+        color: $Text-White-500;
+        &:hover {
+            color: $Text-Black-500;
+        }
+    }
+
+    .tg-button, .wp-button {
+        background: $Text-White-500;
+        color: $Text-Black-500;
+    }
+
+    .last-left__button {
+        background: none;
+        color: white;
     }
 
 }

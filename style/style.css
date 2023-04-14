@@ -2170,7 +2170,6 @@ label {
     padding: 15px 24px;
   }
   .little-button.arr .after, .mob-little-button.arr .after {
-    content: url(./../assets/icons/Vector.svg);
     display: block;
     height: 15px;
     width: 10px;
@@ -2323,7 +2322,7 @@ label {
     position: relative;
     display: flex;
     max-width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
     position: absolute;
     transition: all 0.4s ease;
     left: 0;
@@ -2465,14 +2464,17 @@ label {
     font-family: "Supermolot Light";
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 18px;
     line-height: 125%;
     color: #FAFAFA;
-    margin: 0 44px 0 34px;
+    margin: 0 34px 0 34px;
   }
   .lap-st-num .zer {
-    font-size: 28px;
+    font-size: 18px;
     color: #A2A3A4;
+  }
+  .st-prew, .st-next {
+    height: 20px;
   }
   .lap-st-buttons {
     display: flex;
@@ -2654,7 +2656,6 @@ label {
     text-align: center;
     color: #FAFAFA;
     padding: 20px 57px;
-    background: #1B69D3;
     border-radius: 4px;
     transition: all 0.4s ease;
     cursor: pointer;
@@ -2665,9 +2666,8 @@ label {
     align-items: center;
     padding: 18px 32px;
   }
-  .button.arr::after,
-  .button-mob.arr::after {
-    content: url(./../assets/icons/button-arr.svg);
+  .button.arr .after,
+  .button-mob.arr .after {
     display: block;
     height: 27px;
     width: 18px;
@@ -2809,17 +2809,31 @@ label {
   }
   .top__text {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .top__text__heading {
-    width: 100%;
+    min-width: 300px;
     max-width: 320px;
   }
   .topList {
-    width: 100%;
+    min-width: 300px;
     max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .topList__item {
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .topList__item p {
     margin-left: 12px;
+    width: 276px;
+  }
+  .topList__item:last-child p {
+    width: 276px;
   }
   .top__bg {
     left: -10px;
@@ -2862,6 +2876,8 @@ label {
     width: 100%;
     padding: 20px;
     display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   .topBtm__item__text {
     width: 100%;
@@ -2900,6 +2916,9 @@ label {
     width: 100%;
     overflow-x: scroll;
   }
+  .top {
+    padding-bottom: 0;
+  }
   .tab-btn {
     flex-shrink: 0;
     margin-right: 6px;
@@ -2915,7 +2934,7 @@ label {
   .top-spros-card__top {
     width: 100%;
     height: auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 300/207.56;
   }
   .top-spros-card-deal {
     width: 160px;
@@ -2953,9 +2972,10 @@ label {
   }
   .calculator__wraper {
     width: 100%;
+    align-items: center;
   }
   .calculator-left {
-    width: 100%;
+    width: 300px;
     padding: 30px 10px;
   }
   .calc-arr {
@@ -3157,6 +3177,9 @@ label {
   .price-card:last-child {
     margin-bottom: 0;
   }
+  .about-left__text {
+    width: 100%;
+  }
   .last {
     padding: 90px 0;
   }
@@ -3209,5 +3232,62 @@ label {
   }
   .mfl {
     margin-right: 37px;
+  }
+  .year-calc-lab {
+    right: 25px;
+    top: 300px;
+  }
+  .obem-calc-lab {
+    right: 25px;
+    top: 400px;
+  }
+  .variant-calc-lab {
+    right: 25px;
+    top: 500px;
+  }
+  .podbor:hover {
+    background-color: #424B5C;
+  }
+  .mob-little-button {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    text-align: center;
+    color: #FAFAFA;
+    background: #1B69D3;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .seti-button {
+    background: #FAFAFA;
+    color: #0F0F0F;
+    font-size: 15px;
+  }
+  .seti-button:hover {
+    background: #FAFAFA;
+  }
+  .as-slide-white-button {
+    background: none;
+  }
+  .ww__heading {
+    margin-bottom: 60px;
+  }
+  .seti-button {
+    background: none;
+    color: #FAFAFA;
+  }
+  .seti-button:hover {
+    color: #0F0F0F;
+  }
+  .tg-button, .wp-button {
+    background: #FAFAFA;
+    color: #0F0F0F;
+  }
+  .last-left__button {
+    background: none;
+    color: white;
   }
 }/*# sourceMappingURL=style.css.map */
