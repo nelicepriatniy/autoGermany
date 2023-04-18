@@ -2262,6 +2262,7 @@ label {
     width: 100%;
     height: auto;
     padding-top: 0;
+    padding-bottom: 0;
   }
   .topTop {
     flex-direction: column;
