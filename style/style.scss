@@ -2321,6 +2321,17 @@ label {
     }
 }
 
+.popup-form {
+    position: fixed;
+    width: 660px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $Secondary1;
+    z-index: 102;
+}
+
 @media (max-width: 1161px) {
     .little-button, .mob-little-button {
         font-family: 'Onest';
@@ -2329,8 +2340,8 @@ label {
         font-size: 15px;
         line-height: 100%;
         text-align: center;
-        color: $Text-White-500;
-        background: $Main;
+        // color: $Text-White-500;
+        // background: $Main;
         border-radius: 4px;
         padding: 15px 24px;
     
@@ -2353,7 +2364,7 @@ label {
         cursor: pointer;
     
         &:hover {
-            background: $Hover;
+            // background: $Hover;
     
             &.arr {
                 padding-right: 20px;
@@ -2387,6 +2398,12 @@ label {
         width: 600px;
         margin: 0;
         margin-left: calc((100vw - 600px) / 2);
+    }
+
+    header {
+        height: 80px;
+        background: rgba(0, 0, 0, 0.3);
+        width: 100%;
     }
 
     .header__logo {
@@ -2485,7 +2502,7 @@ label {
     }
 
     .top__formBlock__text {
-        margin-top: 30px;
+        // margin-top: 30px;
     }
 
     .top__formBlock__button {
@@ -2515,6 +2532,7 @@ label {
     .topBtm__item {
         margin-bottom: 20px;
         width: fit-content;
+        height: auto;
 
         &:last-child {
             margin-bottom: 0;
@@ -2598,7 +2616,7 @@ label {
     .calculator-left {
         width: 600px;
         padding: 60px 30px;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
     }
 
     .calc-heading-block {
@@ -2665,6 +2683,7 @@ label {
     .wp-text {
         text-align: center;
         width: 466px;
+        margin-top: 20px;
     }
 
     .about {
@@ -2677,7 +2696,10 @@ label {
 
     .about-left {
         margin: 0;
+        display: flex;
         width: 600px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .about-left__img {
@@ -2750,6 +2772,28 @@ label {
     .as-slide-button,
     .as-slide-white-button {
         width: 100%;
+    }
+
+    .as-slide-white-button {
+        background: none;
+        border: 1px solid #D9D9D9;
+    
+        &:hover {
+            background: none;
+            border: 1px solid #D9D9D9;
+            
+        }
+    
+        &.light {
+            color: $Secondary1;
+            border: 1px solid #2C323D;
+    
+            &:hover {
+                background: none;
+                color: $Secondary1;
+                border: 1px solid #2C323D;
+            }
+        }
     }
 
     .as-slide-button {
@@ -2932,6 +2976,31 @@ label {
     .top-spros__text {
         flex-direction: column;
         align-items: center;
+    }
+
+    .top-spros__tabs-btn {
+        margin-top: 60px;
+    }
+
+    .podbor.arr {
+        flex-shrink: 0;
+    }
+
+    .top-spros-card__buttons {
+        & .button {
+            &:first-child {
+                width: 100%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .puggin {
+        margin-top: 20px;
+    }
+
+    .ww__heading__arr {
+        width: 60px;
     }
 
 }

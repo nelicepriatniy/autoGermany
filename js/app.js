@@ -100,7 +100,7 @@ const alSaleLap = new Swiper('.as-slider-lap', {
       // when window width is >= 640px
       640: {
         slidesPerView: 2,
-        spaceBetween: 40
+        spaceBetween: 20
       }
     }
 });

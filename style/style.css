@@ -2149,6 +2149,17 @@ label {
   height: auto;
 }
 
+.popup-form {
+  position: fixed;
+  width: 660px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2C323D;
+  z-index: 102;
+}
+
 @media (max-width: 1161px) {
   .little-button, .mob-little-button {
     font-family: "Onest";
@@ -2157,8 +2168,6 @@ label {
     font-size: 15px;
     line-height: 100%;
     text-align: center;
-    color: #FAFAFA;
-    background: #1B69D3;
     border-radius: 4px;
     padding: 15px 24px;
     transition: all 0.4s ease;
@@ -2175,9 +2184,6 @@ label {
     width: 10px;
     margin: 0 0 0 20px;
     transition: all 0.4s ease;
-  }
-  .little-button:hover, .mob-little-button:hover {
-    background: #1B3CC8;
   }
   .little-button:hover.arr, .mob-little-button:hover.arr {
     padding-right: 20px;
@@ -2204,6 +2210,11 @@ label {
     width: 600px;
     margin: 0;
     margin-left: calc((100vw - 600px) / 2);
+  }
+  header {
+    height: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
   }
   .header__logo {
     width: 100px;
@@ -2282,9 +2293,6 @@ label {
   .top__formBlock__procent {
     margin-bottom: 10px;
   }
-  .top__formBlock__text {
-    margin-top: 30px;
-  }
   .top__formBlock__button {
     margin-top: 30px;
   }
@@ -2308,6 +2316,7 @@ label {
     margin-bottom: 20px;
     width: -moz-fit-content;
     width: fit-content;
+    height: auto;
   }
   .topBtm__item:last-child {
     margin-bottom: 0;
@@ -2375,7 +2384,7 @@ label {
   .calculator-left {
     width: 600px;
     padding: 60px 30px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
   .calc-heading-block {
     display: flex;
@@ -2431,6 +2440,7 @@ label {
   .wp-text {
     text-align: center;
     width: 466px;
+    margin-top: 20px;
   }
   .about {
     margin-top: 120px;
@@ -2440,7 +2450,10 @@ label {
   }
   .about-left {
     margin: 0;
+    display: flex;
     width: 600px;
+    flex-direction: column;
+    align-items: center;
   }
   .about-left__img {
     width: 600px;
@@ -2499,6 +2512,23 @@ label {
   .as-slide-button,
   .as-slide-white-button {
     width: 100%;
+  }
+  .as-slide-white-button {
+    background: none;
+    border: 1px solid #D9D9D9;
+  }
+  .as-slide-white-button:hover {
+    background: none;
+    border: 1px solid #D9D9D9;
+  }
+  .as-slide-white-button.light {
+    color: #2C323D;
+    border: 1px solid #2C323D;
+  }
+  .as-slide-white-button.light:hover {
+    background: none;
+    color: #2C323D;
+    border: 1px solid #2C323D;
   }
   .as-slide-button {
     margin: 0;
@@ -2643,6 +2673,22 @@ label {
   .top-spros__text {
     flex-direction: column;
     align-items: center;
+  }
+  .top-spros__tabs-btn {
+    margin-top: 60px;
+  }
+  .podbor.arr {
+    flex-shrink: 0;
+  }
+  .top-spros-card__buttons .button:first-child {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .puggin {
+    margin-top: 20px;
+  }
+  .ww__heading__arr {
+    width: 60px;
   }
 }
 @media (max-width: 600px) {
