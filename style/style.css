@@ -2317,6 +2317,7 @@ label {
     width: -moz-fit-content;
     width: fit-content;
     height: auto;
+    padding: 26px 20px 30px 20px;
   }
   .topBtm__item:last-child {
     margin-bottom: 0;
