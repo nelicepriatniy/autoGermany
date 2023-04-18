@@ -3004,6 +3004,39 @@ label {
         width: 60px;
     }
 
+    .tg-button, .wp-button {
+        width: fit-content;
+        padding: 0;
+        padding-left: 12px;
+        font-size: 18px;
+    }
+    .tg-button {
+        width: fit-content;
+        padding-right: 16px;
+    }
+    .wp-button {
+        padding-right: 37px;
+    }
+
+    .year-calc-lab, .obem-calc-lab, .variant-calc-lab {
+        right: 50px;
+    }
+
+    .year-calc-lab {
+        top: 346px;
+        
+    }
+    
+    .obem-calc-lab {
+        top: 447px;
+
+    }
+
+    .variant-calc-lab {
+        top: 549px;
+
+    }
+
 }
 
 @media (max-width: 600px) {
