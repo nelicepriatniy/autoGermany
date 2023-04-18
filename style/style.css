@@ -2241,7 +2241,7 @@ label {
   .top__bg {
     top: 0;
     left: calc((-100vw + 600px) / 2);
-    min-width: auto;
+    min-width: 100vw;
     min-height: 100%;
     z-index: -1;
   }

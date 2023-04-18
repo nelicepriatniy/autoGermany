@@ -457,6 +457,12 @@ tabBtns.forEach(el=>{
     el.onclick = ()=>{
         let blockId = el.getAttribute('data-sprostab');
         let block = document.querySelectorAll('#'+blockId)
+        el.activeIndex = 1;
+        // lapTabs.slideTo(0);
+        lapTabs.forEach(el=>{
+            el.slideTo(0);
+        })
+        numSlide.innerHTML = 1;
         console.log(block)
         lapSlides.forEach(el=>{
             el.classList.remove('visible')
