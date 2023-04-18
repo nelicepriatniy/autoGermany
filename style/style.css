@@ -614,7 +614,11 @@ header.active {
 
 @media (min-height: 900px) {
   .top {
-    padding: 0;
+    padding-bottom: 140px;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -3030,7 +3034,7 @@ label {
   .top-spros-card-deal {
     width: 160px;
     height: 35px;
-    margin-bottom: 3px;
+    margin-bottom: 3.8px;
   }
   .top-spros-deal-text {
     font-size: 12px;
@@ -3190,8 +3194,9 @@ label {
     width: 280px;
     height: 84px;
     padding: 17px 0 17px 0;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
+    padding-left: 28px;
   }
   .about-card:last-child {
     margin-bottom: 0;
@@ -3204,11 +3209,10 @@ label {
   }
   .about-card__num {
     font-size: 45px;
-    margin-right: 36px;
     margin-bottom: 0;
     line-height: 100%;
-  }
-  .about-card__num.mr20 {
+    width: 58px;
+    text-align: center;
     margin-right: 20px;
   }
   .about-card__text {
@@ -3377,6 +3381,7 @@ label {
   .tg-button, .wp-button {
     background: #FAFAFA;
     color: #0F0F0F;
+    width: 262px;
   }
   .last-left__button {
     background: none;
