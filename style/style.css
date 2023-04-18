@@ -1748,8 +1748,8 @@ select:focus .select-svg path {
 }
 
 .last-left__button__img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   margin-right: 18px;
 }
 
@@ -2255,6 +2255,7 @@ label {
   }
   .burgerWraper {
     padding: 30px 30px 0 0;
+    margin-bottom: 50px;
   }
   .top {
     max-width: 100vw;
@@ -2298,7 +2299,7 @@ label {
     margin-top: 30px;
   }
   .top__fromBlock__bg-blue {
-    left: 268px;
+    left: 274px;
   }
   .top-bg-block {
     background: #FAFAFA;
@@ -2562,13 +2563,14 @@ label {
     margin-right: 0;
   }
   .act-sale__tg {
-    padding: 40px 0;
+    padding: 45px 0;
     flex-direction: column;
   }
   .act-sale__tg__text {
     width: 579px;
     text-align: center;
     margin-bottom: 30px;
+    font-size: 20px;
   }
   .seti-button {
     margin-bottom: 0;
@@ -2633,6 +2635,9 @@ label {
   .last-left {
     margin-right: 0;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .last-left__heading {
     width: 600px;
@@ -2640,6 +2645,7 @@ label {
   }
   .last-left__text {
     text-align: center;
+    width: 493px;
   }
   .last-left__mob,
   .last-left__geo {
@@ -2718,6 +2724,16 @@ label {
   }
   .variant-calc-lab {
     top: 549px;
+  }
+  .acts__heading {
+    width: 100%;
+    text-align: center;
+  }
+  .last-left__mob__num {
+    color: #FAFAFA;
+  }
+  .last-left__mob, .last-left__geo {
+    padding-left: 0;
   }
 }
 @media (max-width: 600px) {
