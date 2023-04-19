@@ -57,6 +57,7 @@ headerMenuCloseBtn.onclick = () => {
 popupClose.onclick = () => {
     headerMenu.classList.remove('active')
     popupClose.classList.remove('active')
+    popupForm.classList.remove('active')
 }
 
 
@@ -502,7 +503,7 @@ $(function(){
 //добавление класса
 
 let phoneInput = document.querySelector('#phone')
-let lastButton = document.querySelector('.button-last-form')
+let lastButton = document.querySelector('.lastForm')
 let lastInp = document.querySelector('.rewText');
 
 lastButton.onclick = ()=>{
@@ -510,6 +511,40 @@ lastButton.onclick = ()=>{
         phoneInput.classList.add('notRew')
         lastInp.classList.add('notRew')
     } else {
-        // console.log(321)
+        phoneInput.classList.remove('notRew')
+        lastInp.classList.remove('notRew')
     }
 }
+
+let phoneInputPop = document.querySelector('.popTel')
+let lastButtonPop = document.querySelector('.popForm')
+let lastInpPop = document.querySelector('.rewPop');
+
+lastButtonPop.onclick = ()=>{
+    if (phoneInputPop.value == false) {
+        phoneInputPop.classList.add('notRew')
+        lastInpPop.classList.add('notRew')
+    } else {
+        // console.log(321)
+        phoneInputPop.classList.remove('notRew')
+        lastInpPop.classList.remove('notRew')
+    }
+}
+
+let openPopupForm = document.querySelectorAll('.open-form-btn');
+let popupForm = document.querySelector('.popup-form');
+let closePopupForm = document.querySelectorAll('.popup-form__close-btn');
+
+openPopupForm.forEach(el=>{
+    el.onclick = ()=>{
+        popupForm.classList.add('active')
+        popupClose.classList.add('active')
+    }
+})
+
+closePopupForm.forEach(el=>{
+    el.onclick = ()=>{
+        popupForm.classList.remove('active')
+        popupClose.classList.remove('active')
+    }
+})

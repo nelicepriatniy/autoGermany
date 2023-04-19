@@ -87,8 +87,7 @@
     </div>
 
     <div class="popupClose"></div>
-
-    <main>
+    <main> 
         <section class="top">
             <div class="container topTop">
                 <div class="top__text">
@@ -107,7 +106,7 @@
                 <div class="top__formBlock">
                     <p class="top__formBlock__procent"><span>оплати </span>15%</p>
                     <p class="top__formBlock__text text">Остальную сумму платите по факту получения авто</p>
-                    <button class="top__formBlock__button big-button arr button-mob">Подобрать автомобиль <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
+                    <button class="top__formBlock__button big-button arr button-mob open-form-btn">Подобрать автомобиль <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                     <!-- <img src="./assets/1x1.png" data-src="./assets/top/formbg.svg" alt=""
                         class="top__fromBlock__bg lazy"> -->
                         <img src="./assets/1x1.png" data-src="./assets/top/formbg-blue.svg" alt=""
@@ -222,7 +221,7 @@
                             </div>
                         </div>
                         <div class="top-spros-card__buttons">
-                            <button class="button zakazat">Заказать авто</button>
+                            <button class="button zakazat open-form-btn">Заказать авто</button>
                             <button class="podbor button arr">Подборка на <span> mobile.de </span> <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                         </div>
                     </div>
@@ -350,7 +349,7 @@
                             </div>
                         </div>
                         <div class="top-spros-card__buttons">
-                            <button class="button zakazat">Заказать авто</button>
+                            <button class="button zakazat open-form-btn">Заказать авто</button>
                             <button class="podbor button arr">Подборка на <span> mobile.de </span> <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                         </div>
                     </div>
@@ -478,7 +477,7 @@
                             </div>
                         </div>
                         <div class="top-spros-card__buttons">
-                            <button class="button zakazat">Заказать авто</button>
+                            <button class="button zakazat open-form-btn">Заказать авто</button>
                             <button class="podbor button arr">Подборка на <span> mobile.de </span> <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                         </div>
                     </div>
@@ -606,7 +605,7 @@
                             </div>
                         </div>
                         <div class="top-spros-card__buttons">
-                            <button class="button zakazat">Заказать авто</button>
+                            <button class="button zakazat open-form-btn">Заказать авто</button>
                             <button class="podbor button arr">Подборка на <span> mobile.de </span> <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                         </div>
                     </div>
@@ -734,7 +733,7 @@
                             </div>
                         </div>
                         <div class="top-spros-card__buttons">
-                            <button class="button zakazat">Заказать авто</button>
+                            <button class="button zakazat open-form-btn">Заказать авто</button>
                             <button class="podbor button arr">Подборка на <span> mobile.de </span> <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                         </div>
                     </div>
@@ -862,7 +861,7 @@
                             </div>
                         </div>
                         <div class="top-spros-card__buttons">
-                            <button class="button zakazat">Заказать авто</button>
+                            <button class="button zakazat open-form-btn">Заказать авто</button>
                             <button class="podbor button arr">Подборка на <span> mobile.de </span> <img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                         </div>
                     </div>
@@ -2795,7 +2794,7 @@
                                 <label class="little-text checklabela" for="polytic-checkbox">Я согласен (на) с
                                     политикой конфиденциальности</label>
                             </div>
-                            <button class="big-button button-last-form">Оставить заявку </button>
+                            <button class="big-button button-last-form lastForm">Оставить заявку </button>
                         </div>
                     </div>
                 </div>
@@ -2852,11 +2851,29 @@
         </a>
     </div>
 
-    <!-- <div class="popup-form">
+    <div class="popup-form">
         <div class="popup-form__close-btn">
             <img src="./assets/headerMenu/Burger.svg" alt="" class="popupClose-button lazy">
         </div>
-    </div> -->
+        <p class="title popup-form__title">Подберем автомобиль из Германии под Ваш бюджет</p>
+        <p class="big-text popup-form__text">Оставьте заявку, и мы бесплатно проконсультируем Вас </p>
+        <div action="" class="popup-form__form">
+            <div class="last-form">
+                <input class="last-form-inp text" type="text" placeholder="Имя">
+                <input class="last-form-inp text popTel" id="phone" type="text" placeholder="Телефон">
+                <div class="rewText rewPop">Поле не заполнено или некорректные данные</div>
+                <input class="last-form-inp text" type="text" placeholder="Ваш примерный бюджет ">
+                <div class="checkbox-wraper">
+                    <input type="checkbox" id="polytic-checkbox" checked>
+                    <label for="polytic-checkbox" class="checklabel active"> </label>
+                    <label class="little-text checklabela" for="polytic-checkbox">Я согласен (на) с
+                        политикой конфиденциальности</label>
+                </div>
+                <button class="big-button button-last-form popForm">Оставить заявку </button>
+            </div>
+        </div>
+
+    </div>
 
     <!-- <p class="little-text">маленький текст</p>
     <p class="text">текст</p>
