@@ -113,7 +113,7 @@
                             class="top__fromBlock__bg-blue lazy">
                             <div class="form-block-bg-block"></div>
                 </div>
-                <img src="./assets/1x1.png" data-src="./assets/top/Main-screen-lap.png" alt="" class="top__bg lazy lap mob">
+                <img src="./assets/1x1.png" data-src="./assets/top/Main-screenmobil.jpg" alt="" class="top__bg lazy lap mob">
             </div>
             <div class="top-bg-block">
                 <div class="container topBtm">
@@ -1945,7 +1945,7 @@
         <section class="calculator"> 
             <div class="container calc-container">
                 <h2 class="calculator__heading h2-animate animate">рассчитайте стоимость доставки из Германии <br class="lap"> в Москву</h2>
-                <p class="big-text calculator__text">Выбирайте авто на сайте mobile.de Вводите данные в калькулятор
+                <p class="big-text calculator__text">Выбирайте авто на сайте mobile.de <br class="mob"> Вводите данные в калькулятор
                 </p>
                 <div class="calculator__wraper">
                     <div class="calculator-left">
@@ -1959,47 +1959,55 @@
                                 placeholder="Введите только цифры (без лишних символов)" min=0 oninput="validity.valid||(value='');">
                             <p class="pricevaluered">введите значение</p>
                             <label class="calc-label" for="cena-calc">возраст автомобиля</label>
-                            <select class="calc-inp text" name="calc-inp" id="year-calc">
-                                <option class="text calc-opt" value="1">до 3х лет</option>
-                                <option id="asddsa" class="text calc-opt" value="2">от 3 до 5 лет</option>
-                                <option class="text calc-opt" value="3">от 5 лет</option>
-                            </select>
-                            <label for="year-calc" class="year-calc-lab desk lap">
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-svg">
-                                    <path d="M1.41 0.0899658L6 4.66997L10.59 0.0899658L12 1.49997L6 7.49997L0 1.49997L1.41 0.0899658Z"/>
-                                </svg>
-                            </label>
+                            <div class="label-container">
+                                <select class="calc-inp text" name="calc-inp" id="year-calc">
+                                    <option class="text calc-opt" value="1">до 3х лет</option>
+                                    <option id="asddsa" class="text calc-opt" value="2">от 3 до 5 лет</option>
+                                    <option class="text calc-opt" value="3">от 5 лет</option>
+                                </select>
+                                <label for="year-calc" class="year-calc-lab">
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-svg">
+                                        <path d="M1.41 0.0899658L6 4.66997L10.59 0.0899658L12 1.49997L6 7.49997L0 1.49997L1.41 0.0899658Z"/>
+                                    </svg>
+                                </label>
+
+                            </div>
                             <label class="calc-label" for="obem-calc">Объём двигателя, литры</label>
-                            <select class="calc-inp text" name="obem-calc" id="obem-calc">
-                                <option class="text calc-opt" value="1.5">1,5 литра</option>
-                                <option class="text calc-opt" value="1.6">1,6 литра</option>
-                                <option class="text calc-opt" value="2">2 литра</option>
-                                <option class="text calc-opt" value="2.2">2,2 литра</option>
-                                <option class="text calc-opt" value="2.5">2,5 литра</option>
-                                <option class="text calc-opt" value="2.7">2,7 литра</option>
-                                <option class="text calc-opt" value="3">3 литра</option>
-                                <option class="text calc-opt" value="3.2">3,2 литра</option>
-                                <option class="text calc-opt" value="3.5">3,5 литра</option>
-                                <option class="text calc-opt" value="3.7">3,7 литра</option>
-                                <option class="text calc-opt" value="4">4 литра</option>
-                                <option class="text calc-opt" value="4.5">4,5 литра</option>
-                                <option class="text calc-opt" value="6">6 литров</option>
-                            </select>
-                            <label for="obem-calc" class="obem-calc-lab desk lap">
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-svg">
-                                    <path d="M1.41 0.0899658L6 4.66997L10.59 0.0899658L12 1.49997L6 7.49997L0 1.49997L1.41 0.0899658Z"/>
-                                </svg>
-                            </label>
+                            <div class="label-container">
+                                <select class="calc-inp text" name="obem-calc" id="obem-calc">
+                                    <option class="text calc-opt" value="1.5">1,5 литра</option>
+                                    <option class="text calc-opt" value="1.6">1,6 литра</option>
+                                    <option class="text calc-opt" value="2">2 литра</option>
+                                    <option class="text calc-opt" value="2.2">2,2 литра</option>
+                                    <option class="text calc-opt" value="2.5">2,5 литра</option>
+                                    <option class="text calc-opt" value="2.7">2,7 литра</option>
+                                    <option class="text calc-opt" value="3">3 литра</option>
+                                    <option class="text calc-opt" value="3.2">3,2 литра</option>
+                                    <option class="text calc-opt" value="3.5">3,5 литра</option>
+                                    <option class="text calc-opt" value="3.7">3,7 литра</option>
+                                    <option class="text calc-opt" value="4">4 литра</option>
+                                    <option class="text calc-opt" value="4.5">4,5 литра</option>
+                                    <option class="text calc-opt" value="6">6 литров</option>
+                                </select>
+                                <label for="obem-calc" class="obem-calc-lab">
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-svg">
+                                        <path d="M1.41 0.0899658L6 4.66997L10.59 0.0899658L12 1.49997L6 7.49997L0 1.49997L1.41 0.0899658Z"/>
+                                    </svg>
+                                </label>
+                            </div>
                             <label class="calc-label" for="obem-calc">Вариант растаможивания</label>
-                            <select class="calc-inp text" name="obem-calc" id="variant-calc">
-                                <option class="text calc-opt" value="1">на РФ</option>
-                                <option class="text calc-opt" value="2">льготная на РБ</option>
-                            </select>
-                            <label for="variant-calc" class="variant-calc-lab desk lap">
-                                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-svg">
-                                    <path d="M1.41 0.0899658L6 4.66997L10.59 0.0899658L12 1.49997L6 7.49997L0 1.49997L1.41 0.0899658Z"/>
-                                </svg>
-                            </label>
+                            <div class="label-container">
+                                <select class="calc-inp text" name="obem-calc" id="variant-calc">
+                                    <option class="text calc-opt" value="1">на РФ</option>
+                                    <option class="text calc-opt" value="2">льготная на РБ</option>
+                                </select>
+                                <label for="variant-calc" class="variant-calc-lab">
+                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="select-svg">
+                                        <path d="M1.41 0.0899658L6 4.66997L10.59 0.0899658L12 1.49997L6 7.49997L0 1.49997L1.41 0.0899658Z"/>
+                                    </svg>
+                                </label>
+
+                            </div>
                             <button class="big-button calc-btn">Рассчитать стоимость</button>
                             <div class="text-calc">
                                 <p class="text-calc-p">Итого стоимость в Москве: </p>
@@ -2017,7 +2025,7 @@
                         </div>
                         <div class="calc-right__wp">
                             <p class="big-text calc-right__wp__text">
-                                Пишите нам в WhatsApp мы отправим Вам расчет:
+                                Пишите нам в WhatsApp <br class="mob"> мы отправим Вам расчет:
                             </p>
                             <a class="button seti-button wp-button"><img src="./assets/1x1.png"
                                     data-src="./assets/icons/wp.svg" alt="" class="lazy btn-seti__img"> Написать в
@@ -2834,19 +2842,19 @@
 
     <div class="wijet-open">
         <a href="#" class="wijet-item">
-            <p class="wijet-text">Позвонить</p>
+            <p class="wijet-text desk lap">Позвонить</p>
             <img src="./assets/1x1.png" data-src="./assets/wiget/phone.svg" alt="" class="lazy wijet-item__img">
         </a>
         <a href="#" class="wijet-item">
-            <p class="wijet-text">WhatsApp</p>
+            <p class="wijet-text desk lap">WhatsApp</p>
             <img src="./assets/1x1.png" data-src="./assets/wiget/wp.svg" alt="" class="lazy wijet-item__img">
         </a>
         <a href="#" class="wijet-item">
-            <p class="wijet-text">Viber</p>
+            <p class="wijet-text desk lap">Viber</p>
             <img src="./assets/1x1.png" data-src="./assets/wiget/viber.svg" alt="" class="lazy wijet-item__img">
         </a>
         <a href="#" class="wijet-item">
-            <p class="wijet-text">Telegram</p>
+            <p class="wijet-text desk lap">Telegram</p>
             <img src="./assets/1x1.png" data-src="./assets/wiget/tg.svg" alt="" class="lazy wijet-item__img">
         </a>
     </div>

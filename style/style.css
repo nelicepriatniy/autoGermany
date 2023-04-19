@@ -2975,9 +2975,10 @@ label {
   }
   .top__bg {
     left: -10px;
+    filter: brightness(40%);
   }
   .top__formBlock {
-    width: 300px;
+    width: 100%;
     padding: 20px 10px;
     margin-top: 88px;
   }
@@ -2991,7 +2992,8 @@ label {
     width: 60px;
     height: 15px;
     top: 50px;
-    left: 187px;
+    left: 50%;
+    transform: translateX(69%);
   }
   .top__formBlock__procent {
     margin-bottom: 0;
@@ -3123,7 +3125,7 @@ label {
     margin-right: 20px;
   }
   .calc-heading-block {
-    margin-bottom: 13px;
+    margin-bottom: 40px;
   }
   .calc-btn {
     padding: 20px 0;
@@ -3374,15 +3376,15 @@ label {
   }
   .year-calc-lab {
     right: 25px;
-    top: 300px;
+    top: 15px;
   }
   .obem-calc-lab {
     right: 25px;
-    top: 400px;
+    top: 15px;
   }
   .variant-calc-lab {
     right: 25px;
-    top: 500px;
+    top: 15px;
   }
   .podbor:hover {
     background-color: #424B5C;
@@ -3455,5 +3457,53 @@ label {
     height: 40px;
     top: 5px;
     right: 5px;
+  }
+  .lap-st-buttons {
+    margin-top: 35px;
+  }
+  .lap-slider-tabs {
+    margin-top: 15px;
+  }
+  .top-spros-card__buttons .button:first-child {
+    padding: 0;
+    height: 45px;
+  }
+  .podbor.arr {
+    padding: 0;
+    height: 45px;
+  }
+  .big-button {
+    font-size: 18px;
+  }
+  .about-right__text.not-mob-active:last-child {
+    margin-bottom: 80px;
+  }
+  .tg-button, .wp-button {
+    justify-content: flex-start;
+    padding-left: 12px;
+  }
+  .act-sale__tg__text {
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    /* or 23px */
+    text-align: center;
+  }
+  .price-card {
+    width: 100%;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .footer-top {
+    left: 20px;
+  }
+  .label-container {
+    width: 100%;
+    position: relative;
+  }
+  .calc-inp {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
