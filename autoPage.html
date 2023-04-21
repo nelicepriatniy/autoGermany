@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <!-- <img src="./assets/check.png" alt="" class="ckeck"> -->
 
     <header class="active auto-page-header">
         <a href="./index.html" class="header__back headerHref">
@@ -30,7 +31,7 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div data-hash="slider1" class="swiper-slide"><img src="./assets/1x1.png"
+                        <div data-hash="slider1" class="swiper-slide active"><img src="./assets/1x1.png"
                                 data-src="./assets/topSpros/1auto.png" alt="" class="lazy"></div>
                         <div data-hash="slider2" class="swiper-slide"><img src="./assets/1x1.png"
                                 data-src="./assets/topSpros/1auto.png" alt="" class="lazy"></div>
@@ -51,10 +52,10 @@
                             src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
                             class="lazy slider-pagination-img"></a>
                 </div>
-                
+
                 <div class="auto-settings lap">
                     <p class="auto-settings__name">Характеристики:</p>
-                    <p class="auto-settings-sett little-text">Марка: BMW  <br>
+                    <p class="auto-settings-sett little-text">Марка: BMW <br>
                         Тип кузова: Кроссовер <br>
                         Тип двигателя: Бензин <br>
                         Мощность: 380 л.с. <br>
@@ -66,13 +67,13 @@
                 </div>
             </div>
             <div class="slider-pagination mob">
-                <a href="http://127.0.0.1:5501/autoPage.html#slider1" class="slider-pagination-href"><img
+                <a href="http://127.0.0.1:5501/autoPage.html#slider1" class="slider-pagination-href slider-pagination-href-mob active"><img
                         src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
                         class="lazy slider-pagination-img"></a>
-                <a href="http://127.0.0.1:5501/autoPage.html#slider2" class="slider-pagination-href"><img
+                <a href="http://127.0.0.1:5501/autoPage.html#slider2" class="slider-pagination-href slider-pagination-href-mob"><img
                         src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
                         class="lazy slider-pagination-img"></a>
-                <a href="http://127.0.0.1:5501/autoPage.html#slider3" class="slider-pagination-href"><img
+                <a href="http://127.0.0.1:5501/autoPage.html#slider3" class="slider-pagination-href slider-pagination-href-mob"><img
                         src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
                         class="lazy slider-pagination-img"></a>
             </div>
@@ -80,10 +81,11 @@
                 <p class="name-auto">BMW X6 | 2022 </p>
                 <p class="little-text price-auto">Средняя цена в РФ 3 500 000 руб.</p>
                 <p class="auto-price-we">3 000 000 руб.</p>
-                <button class="little-button arr auto-button">Оставить заявку<img src="./assets/1x1.png" data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
+                <button class="little-button arr auto-button">Оставить заявку<img src="./assets/1x1.png"
+                        data-src="./assets/icons/button-arr.svg" alt="" class="lazy after"></button>
                 <div class="auto-settings desk mob">
                     <p class="auto-settings__name">Характеристики:</p>
-                    <p class="auto-settings-sett little-text">Марка: BMW  <br>
+                    <p class="auto-settings-sett little-text">Марка: BMW <br>
                         Тип кузова: Кроссовер <br>
                         Тип двигателя: Бензин <br>
                         Мощность: 380 л.с. <br>
@@ -97,7 +99,13 @@
         </section>
         <section class="auto-desc container">
             <h3 class="auto-desc-name">Описание</h3>
-            <p class="text auto-desc-text">Коплектация Limited: Светодиодная оптика, Подогрев заднего стекла и зеркал заднего вида, Подогрев руля, Подогрев и вентеляция передних сидений, Электрорегулировка передних сидений с памятью водительского сидения, Электрорегуливрока зеркал заднего вида с электроприводом складывания зеркал, Регулировка рулевой колонки по вылету и высоте, Система бесключевого доступа, Беспроводная зарядка для телефона, Розетка в грузовом кузове, Парктроники перед./зад., Функция контроля “Мертвых зон”, Функция удержания в полосе, Динамичный Круиз-контроль, 4 электрических стеклоподъемника, Обработка грузового кузова защитным покрытием, Установка под монтаж Фаркопа, Статичные пороги.
+            <p class="text auto-desc-text">Коплектация Limited: Светодиодная оптика, Подогрев заднего стекла и зеркал
+                заднего вида, Подогрев руля, Подогрев и вентеляция передних сидений, Электрорегулировка передних сидений
+                с памятью водительского сидения, Электрорегуливрока зеркал заднего вида с электроприводом складывания
+                зеркал, Регулировка рулевой колонки по вылету и высоте, Система бесключевого доступа, Беспроводная
+                зарядка для телефона, Розетка в грузовом кузове, Парктроники перед./зад., Функция контроля “Мертвых
+                зон”, Функция удержания в полосе, Динамичный Круиз-контроль, 4 электрических стеклоподъемника, Обработка
+                грузового кузова защитным покрытием, Установка под монтаж Фаркопа, Статичные пороги.
                 Можно купить любым способом оплаты: наличными, б/н, лизинг, кредит.
                 Обмен на Ваш автомобиль по системе Trade-In.
             </p>
@@ -114,7 +122,7 @@
         var lazyLoadInstance = new LazyLoad({
             elements_selector: ".lazy",
         });
-        const swiper = new Swiper('.auto-top-slider-container', {
+        const sliderAuto = new Swiper('.auto-top-slider-container', {
             speed: 400,
             spaceBetween: 100,
             slidesPerView: 1,
@@ -135,6 +143,30 @@
             // }
             // },
         });
+
+        //изменение активного пагина
+
+        if (window.innerWidth > 1161) {
+
+            let pagginBtn = document.querySelectorAll('.slider-pagination-href');
+            sliderAuto.on('slideChangeTransitionStart', function () {
+                console.log(12)
+                pagginBtn.forEach(el => { el.classList.remove('active') })
+                pagginBtn[sliderAuto.activeIndex].classList.add('active')
+            })
+
+        } else {
+
+let pagginBtn = document.querySelectorAll('.slider-pagination-href-mob');
+sliderAuto.on('slideChangeTransitionStart', function () {
+    console.log(12)
+    pagginBtn.forEach(el => { el.classList.remove('active') })
+    pagginBtn[sliderAuto.activeIndex].classList.add('active')
+})
+
+        }
+
+
 
     </script>
 </body>

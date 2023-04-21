@@ -1041,6 +1041,7 @@ label {
 .calculator {
     background: $Text-White-500;
     padding: 120px 0;
+    margin-bottom: 117px;
 }
 
 .calculator__heading {
@@ -1267,7 +1268,7 @@ select:focus {
 }
 
 .about {
-    margin-top: 117px;
+    margin-bottom: 280px;
 }
 
 .about-wraper {
@@ -1351,7 +1352,6 @@ select:focus {
 }
 
 .allredy-sale {
-    margin-top: 280px;
     padding-bottom: 128px;
 }
 
@@ -2426,6 +2426,7 @@ label {
     margin-right: 5px;
     overflow: hidden;
     position: relative;
+    transition: all .4s ease;
     &:last-child {
         margin-right: 0;
     }
@@ -2436,6 +2437,9 @@ label {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    &.active {
+        border: 1px solid $Main;
     }
 }
 .auto-top {
@@ -2508,6 +2512,18 @@ label {
 
 .auto-desc-text {
     color: $Text-White-300;
+    width: 990px;
+}
+.slider-pagination {
+    &.mob {
+        display: none;
+    }
+}
+
+
+.auto-top-slider-container img {
+    aspect-ratio: 300/204;
+
 }
 
 @media (max-width: 1161px) {
@@ -2773,6 +2789,7 @@ label {
 
     .calculator {
         padding: 120px 0;
+        margin-bottom: 120px;
     }
 
     .calculator__heading {
@@ -2869,7 +2886,7 @@ label {
     }
 
     .about {
-        margin-top: 120px;
+        margin-bottom: 240px;
     }
 
     .about-wraper {
@@ -2904,7 +2921,6 @@ label {
     }
 
     .allredy-sale {
-        margin-top: 240px;
     }
 
     .lap-st-num {
@@ -3705,6 +3721,7 @@ label {
 
     .calculator {
         padding: 90px 0;
+        margin-bottom: 90px;
     }
 
     .calculator__text {
@@ -3719,16 +3736,17 @@ label {
     .calculator-left {
         width: 100%;
         padding: 30px 10px;
+        padding-top: 40px;
     }
 
     .calc-arr {
         height: 45px;
         width: 30px;
-        margin-right: 20px;
+        margin-right: 15px;
     }
 
     .calc-heading-block {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
 
     .calc-btn {
@@ -3782,7 +3800,7 @@ label {
     }
 
     .about {
-        margin-top: 90px;
+        margin-bottom: 180px;
     }
 
     .about-left__img {
@@ -3893,7 +3911,6 @@ label {
     }
     
     .allredy-sale {
-        margin-top: 180px;
         padding-bottom: 90px;
     }
 
@@ -4241,6 +4258,7 @@ label {
 
     .auto-top-slider-container {
         margin-bottom: 5px;
+        position: relative;
     }
 
     .name-auto {
@@ -4274,4 +4292,65 @@ label {
     .auto-desc-name::after {
         margin-top: 16px;
     }
+
+    .auto-page-header {
+        margin-bottom: 15px;
+    }
+    
+    .auto-top-slider {
+        aspect-ratio: 300/204;
+        margin-bottom: 10px;
+    }
+
+    .slider-pagination.mob {
+        margin-bottom: 22px;
+    
+
+    }
+
+    .price-auto {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+    }
+
+    .auto-button {
+        width: 216px;
+        height: 45px;
+        padding: 0;
+        padding-left: 32px;
+
+    }
+
+    .auto-settings-sett {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 155%;
+
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        top: 50%;
+        // transform: translateY(-50%);
+    }
+
+    .top-spros-card__buttons {
+        & button {
+            font-size: 15px;
+        }
+    }
+
+    .podbor  {
+        &.arr {
+            & img {
+                &.after {
+                    width: 10px;
+                }
+            }
+        }
+    }
+
+    
+
+
 }
