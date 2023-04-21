@@ -548,3 +548,35 @@ closePopupForm.forEach(el=>{
         popupClose.classList.remove('active')
     }
 })
+
+
+//скролл в хедере
+
+function offsetPosition(element) {
+    var offsetLeft = 0, offsetTop = 0;
+    do {
+        offsetLeft += element.offsetLeft;
+        offsetTop  += element.offsetTop;
+    } while (element = element.offsetParent);
+    return offsetTop;
+}
+
+let scrollBtn = document.querySelectorAll('.scrollbtn');
+scrollBtn.forEach(el => {
+    let elem = el;
+    el.addEventListener('click', function(){
+
+        setTimeout(function(){
+            let data = elem.getAttribute('data-b');
+            let block = document.querySelector(data);
+            let offset = offsetPosition(block);
+            window.scrollTo({
+                top: offset,
+                behavior: 'smooth'
+            });
+            headerMenu.classList.remove('active');
+            popupClose.classList.remove('active')
+            
+        }, 10);
+    })
+});
