@@ -2339,6 +2339,7 @@ label {
 .auto-desc-text {
   color: #D9D9D9;
   width: 990px;
+  margin-bottom: 100px;
 }
 
 .slider-pagination.mob {
