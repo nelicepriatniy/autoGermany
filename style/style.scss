@@ -2527,6 +2527,98 @@ label {
 
 }
 
+//страница ошибки
+
+.err {
+    margin-top: 215px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.err-wraper {
+    width: 455px;
+    display: flex;
+    justify-content: space-between;
+    height: 217px;
+    position: relative;
+
+}
+
+.fourth {
+    font-family: 'Supermolot Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 228.571px;
+    line-height: 95%;
+    color: $Text-Black-300;
+    text-transform: uppercase;
+
+}
+
+.err-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.err-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.err-headeing {
+    text-align: center;
+    color: $Text-White-500;
+    margin-bottom: 20px;
+}
+
+.err-text-text {
+    color: $Text-White-300;
+    margin-bottom: 60px;
+    width: 618px;
+    text-align: center;
+}
+
+.header-href {
+    margin-right: 40px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+//страница спасибо
+
+.thanks-bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.thanks {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.thanks-heading {
+    color: $Text-White-500;
+    margin-bottom: 40px;
+}
+
+.thanks-text {
+    color: $Text-White-500;
+    width: 484px;
+}
+
 @media (max-width: 1161px) {
     .little-button, .mob-little-button {
         font-family: 'Onest';
@@ -3300,6 +3392,24 @@ label {
         display: flex;
         &.mob {
             display: none;
+        }
+    }
+
+    .err {
+        margin-top: 214px;
+    }
+
+    .err-wraper {
+        margin-bottom: 89px;
+    }
+
+    //страница спасибо
+
+    body, html {
+        &.ty {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
         }
     }
 
@@ -4351,7 +4461,66 @@ label {
         }
     }
 
-    
+    .err {
+        margin-top: 190px;
+    }
+
+    .err-wraper {
+        width: 250px;
+        height: 119px;
+        margin-bottom: 78px;
+    }
+
+    .fourth {
+        font-size: 125.714px;
+        line-height: 95%;
+        text-transform: uppercase;
+    }
+
+    .err-img {
+        height: 198px;
+        width: 253px;
+    }
+
+    .err-headeing {
+        margin-bottom: 20px;
+    }
+
+    .err-text-text {
+        width: 300px;
+        margin-bottom: 60px;
+    }
+
+    .err-btn {
+        font-size: 18px;
+        line-height: 100%;
+        padding: 0;
+        width: 300px;
+        height: 65px;
+        &.after {
+            width: 18px;
+        }
+        &.arr {
+            padding: 0;
+            padding-left: 28px;
+        }
+    }
+
+    .thanks-wraper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thanks-heading {
+        text-align: center;
+        width: 100%;
+    }
+
+    .thanks-text {
+        text-align: center;
+        width: 100%;
+    }
 
 
 }
