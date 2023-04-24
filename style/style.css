@@ -3995,4 +3995,8 @@ label {
   .tg-button:hover::after, .wp-button:hover::after {
     display: none;
   }
+  .l-b-w .seti-button:hover {
+    background: none;
+    color: white;
+  }
 }/*# sourceMappingURL=style.css.map */

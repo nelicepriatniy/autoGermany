@@ -4681,5 +4681,14 @@ label {
         }
     }
 
+    .l-b-w {
+        & .seti-button {
+            &:hover {
+                background: none;
+                color: white;
+            }
+        }
+    }
+
 
 }
