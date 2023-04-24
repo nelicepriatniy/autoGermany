@@ -3992,4 +3992,7 @@ label {
   .podbor.arr {
     font-size: 15px;
   }
+  .tg-button:hover::after, .wp-button:hover::after {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

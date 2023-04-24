@@ -4673,5 +4673,13 @@ label {
 
     }
 
+    .tg-button, .wp-button {
+        &:hover {
+            &::after {
+                display: none;
+            }
+        }
+    }
+
 
 }
