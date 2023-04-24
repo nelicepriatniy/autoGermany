@@ -949,7 +949,6 @@ label {
 .calculator {
   background: #FAFAFA;
   padding: 120px 0;
-  margin-bottom: 117px;
 }
 
 .calculator__heading {
@@ -1166,7 +1165,8 @@ select:focus .select-svg path {
 }
 
 .about {
-  margin-bottom: 280px;
+  margin-bottom: 180px;
+  padding-top: 117px;
 }
 
 .about-wraper {
@@ -1248,6 +1248,7 @@ select:focus .select-svg path {
 
 .allredy-sale {
   padding-bottom: 128px;
+  padding-top: 100px;
 }
 
 .as__text {
@@ -2643,7 +2644,6 @@ label {
   }
   .calculator {
     padding: 120px 0;
-    margin-bottom: 120px;
   }
   .calculator__heading {
     width: 100%;
@@ -2723,7 +2723,8 @@ label {
     margin-top: 20px;
   }
   .about {
-    margin-bottom: 240px;
+    margin-bottom: 140px;
+    padding-top: 120px;
   }
   .about-wraper {
     flex-direction: column;
@@ -2749,6 +2750,9 @@ label {
   }
   .about-right__heading {
     text-align: center;
+  }
+  .allredy-sale {
+    padding-top: 100px;
   }
   .lap-st-num {
     font-family: "Supermolot Light";
@@ -3384,7 +3388,6 @@ label {
   }
   .calculator {
     padding: 90px 0;
-    margin-bottom: 90px;
   }
   .calculator__text {
     width: 100%;
@@ -3446,7 +3449,11 @@ label {
     margin-top: 20px;
   }
   .about {
-    margin-bottom: 180px;
+    margin-bottom: 80px;
+    padding-top: 90px;
+  }
+  .allredy-sale {
+    padding-top: 100px;
   }
   .about-left__img {
     width: 100%;

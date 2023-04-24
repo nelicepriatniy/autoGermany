@@ -1041,7 +1041,7 @@ label {
 .calculator {
     background: $Text-White-500;
     padding: 120px 0;
-    margin-bottom: 117px;
+    // margin-bottom: 117px;
 }
 
 .calculator__heading {
@@ -1268,7 +1268,8 @@ select:focus {
 }
 
 .about {
-    margin-bottom: 280px;
+    margin-bottom: 180px;
+    padding-top: 117px;
 }
 
 .about-wraper {
@@ -1353,6 +1354,7 @@ select:focus {
 
 .allredy-sale {
     padding-bottom: 128px;
+    padding-top: 100px;
 }
 
 .as__text {
@@ -2882,7 +2884,7 @@ label {
 
     .calculator {
         padding: 120px 0;
-        margin-bottom: 120px;
+        // margin-bottom: 120px;
     }
 
     .calculator__heading {
@@ -2979,7 +2981,8 @@ label {
     }
 
     .about {
-        margin-bottom: 240px;
+        margin-bottom: 140px;
+        padding-top: 120px;
     }
 
     .about-wraper {
@@ -3014,6 +3017,7 @@ label {
     }
 
     .allredy-sale {
+        padding-top: 100px;
     }
 
     .lap-st-num {
@@ -3832,7 +3836,7 @@ label {
 
     .calculator {
         padding: 90px 0;
-        margin-bottom: 90px;
+        // margin-bottom: 90px;
     }
 
     .calculator__text {
@@ -3911,7 +3915,12 @@ label {
     }
 
     .about {
-        margin-bottom: 180px;
+        margin-bottom: 80px;
+        padding-top: 90px;
+    }
+
+    .allredy-sale {
+        padding-top: 100px;
     }
 
     .about-left__img {
