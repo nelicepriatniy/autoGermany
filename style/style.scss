@@ -254,9 +254,11 @@ h1 {
     transition: 1.2s ease;
 }
 
-.h1-animate, .h2-animate {
+.h1-animate,
+.h2-animate {
     transform: translateY(-25px);
     opacity: 0;
+
     &.active {
         transform: translateY(0);
         opacity: 1;
@@ -266,6 +268,7 @@ h1 {
 .subtitle-animate {
     opacity: 0;
     transition-delay: .2s;
+
     &.active {
         opacity: 1;
     }
@@ -274,10 +277,11 @@ h1 {
 .card-animate {
     transform: translateY(-25px);
     opacity: 0;
+
     &.active {
         transform: translateY(0);
         opacity: 1;
-    } 
+    }
 
 }
 
@@ -297,6 +301,7 @@ h1 {
     // scale: .5;
     opacity: 0;
     transition-delay: .4s;
+
     &.active {
         scale: 1;
         opacity: 1;
@@ -304,7 +309,8 @@ h1 {
 }
 
 .text-animate {
-    opacity: 0; 
+    opacity: 0;
+
     &.active {
         opacity: 1;
     }
@@ -314,6 +320,7 @@ h1 {
 .arr-animate {
     opacity: 0;
     transform: translateX(-25px);
+
     &.active {
         opacity: 1;
         transform: translateX(0);
@@ -323,6 +330,7 @@ h1 {
 .num-animate {
     opacity: 0;
     transform: translateX(-25px);
+
     &.active {
         opacity: 1;
         transform: translateX(0);
@@ -331,6 +339,7 @@ h1 {
 
 .h3-animate {
     opacity: 0;
+
     &.active {
         opacity: 1;
     }
@@ -395,6 +404,7 @@ header {
     &:last-child {
         margin: 0;
     }
+
     &::after {
         content: '';
         height: 3px;
@@ -404,7 +414,8 @@ header {
         display: block;
         margin-top: 7px;
     }
-    &:hover{
+
+    &:hover {
         &::after {
             width: 42px;
         }
@@ -427,10 +438,12 @@ header {
     height: 41px;
     cursor: pointer;
     padding-left: 10px;
+
     & path {
         fill: $Text-White-500;
         transition: all .2s ease;
     }
+
     &:hover {
         & path {
             fill: $Main
@@ -454,10 +467,12 @@ header {
 .header__wpButton__wpLogo {
     height: 25px;
     width: 25px;
+
     & path {
         fill: $Text-White-500;
         transition: all .4s ease;
     }
+
     &:hover {
         & path {
             fill: $Main
@@ -492,11 +507,13 @@ header {
     height: 55px;
     width: 55px;
     cursor: pointer;
+
     &:hover {
         & path {
             fill: $Hover;
         }
     }
+
     & path {
         fill: $Main;
         transition: all 0.4s ease;
@@ -603,11 +620,13 @@ header {
 
 .burgerWraper__img {
     cursor: pointer;
+
     &:hover {
         & path {
             fill: $Hover;
         }
     }
+
     & path {
         fill: $Main;
         transition: all .4s;
@@ -778,6 +797,7 @@ header {
 
         &:hover {
             padding-right: 0;
+
             &::after {
                 margin-left: 30px;
             }
@@ -869,7 +889,7 @@ header {
     &.active {
         background: $Main;
     }
-    
+
     &:hover {
         background: $Hover;
     }
@@ -900,6 +920,7 @@ header {
     transition: all .4s ease;
     opacity: 0;
     z-index: -1;
+
     &.visible {
         position: relative;
         opacity: 1;
@@ -1084,6 +1105,7 @@ label {
     height: 135px;
     transform: translateX(-25px);
     opacity: 0;
+
     &.active {
         transform: translateX(0);
         opacity: 1;
@@ -1122,19 +1144,22 @@ label {
 
 .select {
     color: $Text-White-300;
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
 }
 
 select {
-	/* for Firefox */
-	-moz-appearance: none;
-	/* for Chrome */
-	-webkit-appearance: none;
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
 }
+
 select::-ms-expand {
-	/* IE */
-	display: none;
+    /* IE */
+    display: none;
 }
 
 .select-svg {
@@ -1144,6 +1169,7 @@ select::-ms-expand {
 select:focus {
     & .select-svg {
         transform: rotate(180deg);
+
         & path {
             fill: $Main;
         }
@@ -1452,7 +1478,7 @@ select:focus {
     &:hover {
         background: $Hover;
         border: 1px solid $Hover;
-        
+
     }
 
     &.light {
@@ -1566,6 +1592,7 @@ select:focus {
     &:last-child {
         margin-bottom: 0;
     }
+
     &:hover {
         background: $Hover;
         color: $Text-White-500;
@@ -1908,29 +1935,38 @@ select:focus {
     background: none;
     // margin-bottom: 16px;
     color: white;
+
     &:last-child {
         margin-top: 16px;
         margin-bottom: 8px;
     }
+
     &:first-child {
         margin-bottom: 16px;
     }
+
     &:nth-child(4) {
         margin-bottom: 8px;
     }
+
     &::-webkit-input-placeholder {
         opacity: .6;
         color: white;
     }
-    &::-moz-placeholder          {
+
+    &::-moz-placeholder {
         opacity: .6;
         color: white;
-    }/* Firefox 19+ */
-    &:-moz-placeholder           {
+    }
+
+    /* Firefox 19+ */
+    &:-moz-placeholder {
         opacity: .6;
         color: white;
-    }/* Firefox 18- */
-    &:-ms-input-placeholder      {
+    }
+
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
         opacity: .6;
         color: white;
     }
@@ -2163,10 +2199,12 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
     outline: none;
     border-color: #1B69D3;
 }
@@ -2183,11 +2221,13 @@ input:focus, select:focus {
 .podbor {
     width: 300px;
     height: 58px;
+
     // align-items: center;
     // justify-content: center;
     &.arr {
         padding: 0;
         padding-left: 32px;
+
         & .after {
             width: 12px;
             height: 18px;
@@ -2196,6 +2236,7 @@ input:focus, select:focus {
         }
 
     }
+
     &:hover {
         &.arr {
             padding: 0;
@@ -2210,9 +2251,10 @@ input:focus, select:focus {
     top: 333px;
 }
 
-#year-calc + label {
+#year-calc+label {
     // transform: rotate(180deg);
     transition: all .4s ease;
+
     & path {
         fill: $Text-White-500;
         transition: all .4s ease;
@@ -2220,16 +2262,18 @@ input:focus, select:focus {
 
 }
 
-#year-calc:focus + label {
+#year-calc:focus+label {
     transform: rotate(180deg);
+
     & path {
         fill: $Main;
     }
 
 }
 
-#variant-calc:focus + label {
+#variant-calc:focus+label {
     transform: rotate(180deg);
+
     & path {
         fill: $Main;
     }
@@ -2240,9 +2284,10 @@ label {
     transition: all .4s ease;
 }
 
-#obem-calc:focus + label {
+#obem-calc:focus+label {
     transform: rotate(180deg);
     transition: all .4s ease;
+
     & path {
         fill: $Main;
         transition: all .4s ease;
@@ -2250,12 +2295,13 @@ label {
 
 }
 
-.obem-calc-lab, .variant-calc-lab {
+.obem-calc-lab,
+.variant-calc-lab {
     & path {
         fill: $Text-White-500;
         transition: all .4s ease;
     }
-} 
+}
 
 .obem-calc-lab {
     position: absolute;
@@ -2289,6 +2335,7 @@ label {
     line-height: 135%;
     /* or 16px */
     margin-bottom: 16px;
+
     &.notRew {
         visibility: visible;
         height: auto;
@@ -2302,6 +2349,7 @@ label {
 #cena-calc {
     margin-bottom: 0;
     transition: all .4s ease;
+
     &.redFlag {
         // height: 10px;
         border-color: #EB5757;
@@ -2319,7 +2367,7 @@ label {
     font-size: 12px;
     line-height: 135%;
     color: #EB5757;
-    
+
     &.redFlag {
         height: auto;
 
@@ -2343,6 +2391,7 @@ label {
     // z-index: -1;
     transition: all .4s ease;
     z-index: 102;
+
     &.active {
         opacity: 1;
         visibility: visible;
@@ -2372,6 +2421,7 @@ label {
 
 .popup-form__form {
     width: 570px;
+
     & .last-form-inp {
         width: 100%;
     }
@@ -2411,9 +2461,11 @@ label {
 .auto-top-slider {
     width: 560px;
     margin-right: 40px;
+    position: relative;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     color: $Text-White-500;
 }
 
@@ -2429,9 +2481,11 @@ label {
     overflow: hidden;
     position: relative;
     transition: all .4s ease;
+
     &:last-child {
         margin-right: 0;
     }
+
     & img {
         min-width: 100%;
         height: 100%;
@@ -2440,10 +2494,12 @@ label {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     &.active {
         border: 1px solid $Main;
     }
 }
+
 .auto-top {
     display: flex;
 }
@@ -2502,6 +2558,7 @@ label {
     position: relative;
     margin-bottom: 40px;
     color: $Text-White-500;
+
     &::after {
         content: '';
         display: block;
@@ -2517,6 +2574,7 @@ label {
     width: 990px;
     margin-bottom: 100px;
 }
+
 .slider-pagination {
     &.mob {
         display: none;
@@ -2527,6 +2585,30 @@ label {
 .auto-top-slider-container img {
     aspect-ratio: 300/204;
 
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 0;
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    left: auto;
+    height: 60px !important;
+    top: auto;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+
+    // z-index: 99;
+    width: 60px;
+    height: 60px;
+    margin-right: 5px;
+    margin-left: 0;
+    // position: absolute;
 }
 
 //страница ошибки
@@ -2586,6 +2668,7 @@ label {
 
 .header-href {
     margin-right: 40px;
+
     &:last-child {
         margin-right: 0;
     }
@@ -2622,7 +2705,9 @@ label {
 }
 
 @media (max-width: 1161px) {
-    .little-button, .mob-little-button {
+
+    .little-button,
+    .mob-little-button {
         font-family: 'Onest';
         font-style: normal;
         font-weight: 500;
@@ -2633,12 +2718,12 @@ label {
         // background: $Main;
         border-radius: 4px;
         padding: 15px 24px;
-    
+
         &.arr {
             display: flex;
             align-items: center;
             padding: 15px 24px;
-    
+
             & .after {
                 // content: url(./../assets/icons/Vector.svg);
                 display: block;
@@ -2648,16 +2733,16 @@ label {
                 transition: all .4s ease;
             }
         }
-    
+
         transition: all .4s ease;
         cursor: pointer;
-    
+
         &:hover {
             // background: $Hover;
-    
+
             &.arr {
                 padding-right: 20px;
-    
+
                 & .after {
                     margin: 0 0 0 24px;
                 }
@@ -2852,11 +2937,12 @@ label {
         top: 0;
         opacity: 0;
         z-index: -1;
+
         &.visible {
             position: relative;
             opacity: 1;
             z-index: 3;
-    
+
         }
     }
 
@@ -3035,7 +3121,8 @@ label {
         }
     }
 
-    .st-prew, .st-next {
+    .st-prew,
+    .st-next {
         height: 20px;
     }
 
@@ -3072,17 +3159,17 @@ label {
     .as-slide-white-button {
         background: none;
         border: 1px solid #D9D9D9;
-    
+
         &:hover {
             background: none;
             border: 1px solid #D9D9D9;
-            
+
         }
-    
+
         &.light {
             color: $Secondary1;
             border: 1px solid #2C323D;
-    
+
             &:hover {
                 background: none;
                 color: $Secondary1;
@@ -3303,29 +3390,34 @@ label {
         width: 60px;
     }
 
-    .tg-button, .wp-button {
+    .tg-button,
+    .wp-button {
         width: fit-content;
         padding: 0;
         padding-left: 12px;
         font-size: 18px;
     }
+
     .tg-button {
         width: fit-content;
         padding-right: 16px;
     }
+
     .wp-button {
         padding-right: 37px;
     }
 
-    .year-calc-lab, .obem-calc-lab, .variant-calc-lab {
+    .year-calc-lab,
+    .obem-calc-lab,
+    .variant-calc-lab {
         right: 50px;
     }
 
     .year-calc-lab {
         top: 346px;
-        
+
     }
-    
+
     .obem-calc-lab {
         top: 447px;
 
@@ -3344,7 +3436,9 @@ label {
     .last-left__mob__num {
         color: $Text-White-500;
     }
-    .last-left__mob, .last-left__geo {
+
+    .last-left__mob,
+    .last-left__geo {
         padding-left: 0;
     }
 
@@ -3367,10 +3461,12 @@ label {
 
     .auto-top-slider-container {
         height: 100%;
-        &  img {
+
+        & img {
             height: 100%;
             width: 100%;
         }
+
         margin-bottom: 8px;
     }
 
@@ -3394,6 +3490,7 @@ label {
 
     .slider-pagination {
         display: flex;
+
         &.mob {
             display: none;
         }
@@ -3409,7 +3506,8 @@ label {
 
     //страница спасибо
 
-    body, html {
+    body,
+    html {
         &.ty {
             height: 100vh;
             width: 100vw;
@@ -3418,59 +3516,81 @@ label {
     }
 
 
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: -43px;
+        z-index: 99;
+        height: 35px !important;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+
+        // z-index: 99;
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        margin-left: 0;
+        // position: absolute;
+    }
+
+
 }
 
 @media (max-width: 600px) {
-    
-.button,
-.button-mob {
-    font-family: 'Onest';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 100%;
-    text-align: center;
-    color: $Text-White-500;
-    padding: 20px 57px;
-    // background: $Main;
-    border-radius: 4px;
 
-    &.arr {
-        display: flex;
-        align-items: center;
-        padding: 18px 32px;
-
-        & .after {
-            // content: url(./../assets/icons/button-arr.svg);
-            display: block;
-            height: 27px;
-            width: 18px;
-            margin: 0 0 0 26px;
-            transition: all .4s ease;
-        }
-    }
-
-    transition: all .4s ease;
-    cursor: pointer;
-
-    &:hover {
-        background: $Hover;
+    .button,
+    .button-mob {
+        font-family: 'Onest';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        text-align: center;
+        color: $Text-White-500;
+        padding: 20px 57px;
+        // background: $Main;
+        border-radius: 4px;
 
         &.arr {
-            padding-right: 26px;
+            display: flex;
+            align-items: center;
+            padding: 18px 32px;
 
-            &::after {
-                margin: 0 0 0 32px;
+            & .after {
+                // content: url(./../assets/icons/button-arr.svg);
+                display: block;
+                height: 27px;
+                width: 18px;
+                margin: 0 0 0 26px;
+                transition: all .4s ease;
+            }
+        }
+
+        transition: all .4s ease;
+        cursor: pointer;
+
+        &:hover {
+            background: $Hover;
+
+            &.arr {
+                padding-right: 26px;
+
+                &::after {
+                    margin: 0 0 0 32px;
+                }
             }
         }
     }
-}
 
     .desk,
     .lap {
         display: none;
     }
-    
+
     .mob {
         display: flex;
     }
@@ -3657,7 +3777,7 @@ label {
         padding: 20px 10px;
         margin-top: 88px;
     }
-    
+
 
     .top__formBlock__procent {
         font-size: 50px;
@@ -3803,6 +3923,7 @@ label {
         height: 35px;
         margin-bottom: 3.8px;
     }
+
     .top-spros-deal-text {
         font-size: 12px;
         line-height: 145%;
@@ -3887,7 +4008,8 @@ label {
         width: 100%;
     }
 
-    .calc-right__tg, .calc-right__wp {
+    .calc-right__tg,
+    .calc-right__wp {
         width: 100%;
     }
 
@@ -3952,13 +4074,16 @@ label {
 
     .about-right__text {
         width: 100%;
+
         &.not-mob-active {
             overflow: hidden;
             max-height: 0px;
             transition: all .8s ease;
+
             &.activet {
                 max-height: 300px;
             }
+
             &:last-child {
                 margin-bottom: 125px;
             }
@@ -3982,6 +4107,7 @@ label {
         justify-content: center;
         overflow: hidden;
         transition: all .4s ease;
+
         &.activet {
             height: 0;
             opacity: 0;
@@ -4004,6 +4130,7 @@ label {
         justify-content: flex-start;
         margin-bottom: 20px;
         padding-left: 28px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -4029,7 +4156,7 @@ label {
         width: 155px;
 
     }
-    
+
     .allredy-sale {
         padding-bottom: 90px;
     }
@@ -4093,6 +4220,7 @@ label {
     .price-card {
         margin-bottom: 20px;
         margin-right: 0;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -4105,7 +4233,7 @@ label {
     .last {
         padding: 90px 0;
     }
-    
+
     .last-left {
         display: flex;
         flex-direction: column;
@@ -4120,7 +4248,8 @@ label {
         width: 100%;
     }
 
-    .last-left__mob, .last-left__geo {
+    .last-left__mob,
+    .last-left__geo {
         padding-left: 0;
     }
 
@@ -4144,14 +4273,12 @@ label {
         margin-bottom: 6px;
     }
 
-    .footer-l {
-
-    }
+    .footer-l {}
 
     .footer-l__text {
         margin-bottom: 30px;
     }
-    
+
     .footer-r {
         align-items: flex-start;
     }
@@ -4159,7 +4286,7 @@ label {
     .footer-raz {
         margin-top: 13px;
     }
-    
+
     footer {
         padding-bottom: 90px;
     }
@@ -4215,6 +4342,7 @@ label {
         background: $Text-White-500;
         color: $Text-Black-500;
         font-size: 15px;
+
         &:hover {
             background: $Text-White-500;
         }
@@ -4231,12 +4359,14 @@ label {
     .seti-button {
         background: none;
         color: $Text-White-500;
+
         &:hover {
             color: $Text-Black-500;
         }
     }
 
-    .tg-button, .wp-button {
+    .tg-button,
+    .wp-button {
         background: $Text-White-500;
         color: $Text-Black-500;
         // width: fit-content;
@@ -4309,7 +4439,8 @@ label {
         margin-bottom: 80px;
     }
 
-    .tg-button, .wp-button {
+    .tg-button,
+    .wp-button {
         justify-content: flex-start;
         padding-left: 12px;
     }
@@ -4321,7 +4452,7 @@ label {
         font-size: 16px;
         line-height: 145%;
         /* or 23px */
-        
+
         text-align: center;
 
     }
@@ -4344,7 +4475,7 @@ label {
     .calc-inp {
         width: 100%;
     }
-    
+
     .checklabel::after {
         transform: translate(-50%, -55%);
 
@@ -4352,6 +4483,7 @@ label {
 
     .footer-raz {
         display: block;
+
         &.desk {
             display: none;
         }
@@ -4387,6 +4519,7 @@ label {
         margin-bottom: 3px;
 
     }
+
     .price-auto {
         margin-bottom: 25px;
     }
@@ -4409,6 +4542,7 @@ label {
     .auto-desc-name {
         margin-bottom: 16px;
     }
+
     .auto-desc-name::after {
         margin-top: 16px;
     }
@@ -4416,7 +4550,7 @@ label {
     .auto-page-header {
         margin-bottom: 15px;
     }
-    
+
     .auto-top-slider {
         aspect-ratio: 300/204;
         margin-bottom: 10px;
@@ -4424,7 +4558,7 @@ label {
 
     .slider-pagination.mob {
         margin-bottom: 22px;
-    
+
 
     }
 
@@ -4449,7 +4583,8 @@ label {
 
     }
 
-    .swiper-button-prev, .swiper-button-next {
+    .swiper-button-prev,
+    .swiper-button-next {
         top: 50%;
         // transform: translateY(-50%);
     }
@@ -4460,7 +4595,7 @@ label {
         }
     }
 
-    .podbor  {
+    .podbor {
         &.arr {
             & img {
                 &.after {
@@ -4506,9 +4641,11 @@ label {
         padding: 0;
         width: 300px;
         height: 65px;
+
         &.after {
             width: 18px;
         }
+
         &.arr {
             padding: 0;
             padding-left: 28px;

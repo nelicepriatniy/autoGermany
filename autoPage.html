@@ -31,7 +31,7 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div data-hash="slider1" class="swiper-slide active"><img src="./assets/1x1.png"
+                        <div data-hash="slide1" class="swiper-slide active"><img src="./assets/1x1.png"
                                 data-src="./assets/topSpros/1auto.png" alt="" class="lazy"></div>
                         <div data-hash="slider2" class="swiper-slide"><img src="./assets/1x1.png"
                                 data-src="./assets/topSpros/1auto.png" alt="" class="lazy"></div>
@@ -41,16 +41,14 @@
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
+                <div class="swiper-pagination"></div>
                 <div class="slider-pagination desk lap">
-                    <a href="http://127.0.0.1:5501/autoPage.html#slider1" class="slider-pagination-href"><img
-                            src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
-                            class="lazy slider-pagination-img"></a>
-                    <a href="http://127.0.0.1:5501/autoPage.html#slider2" class="slider-pagination-href"><img
-                            src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
-                            class="lazy slider-pagination-img"></a>
-                    <a href="http://127.0.0.1:5501/autoPage.html#slider3" class="slider-pagination-href"><img
-                            src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
-                            class="lazy slider-pagination-img"></a>
+                    <a href="#slide1" class="slider-pagination-href"><img src="./assets/1x1.png"
+                            data-src="./assets/topSpros/1auto.png" alt="" class="lazy slider-pagination-img"></a>
+                    <a href="#slider2" class="slider-pagination-href"><img src="./assets/1x1.png"
+                            data-src="./assets/topSpros/1auto.png" alt="" class="lazy slider-pagination-img"></a>
+                    <a href="#slider3" class="slider-pagination-href"><img src="./assets/1x1.png"
+                            data-src="./assets/topSpros/1auto.png" alt="" class="lazy slider-pagination-img"></a>
                 </div>
 
                 <div class="auto-settings lap">
@@ -67,15 +65,15 @@
                 </div>
             </div>
             <div class="slider-pagination mob">
-                <a href="http://127.0.0.1:5501/autoPage.html#slider1" class="slider-pagination-href slider-pagination-href-mob active"><img
-                        src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
-                        class="lazy slider-pagination-img"></a>
-                <a href="http://127.0.0.1:5501/autoPage.html#slider2" class="slider-pagination-href slider-pagination-href-mob"><img
-                        src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
-                        class="lazy slider-pagination-img"></a>
-                <a href="http://127.0.0.1:5501/autoPage.html#slider3" class="slider-pagination-href slider-pagination-href-mob"><img
-                        src="./assets/1x1.png" data-src="./assets/topSpros/1auto.png" alt=""
-                        class="lazy slider-pagination-img"></a>
+                <a href="http://127.0.0.1:5501/autoPage.html#slider1"
+                    class="slider-pagination-href slider-pagination-href-mob active"><img src="./assets/1x1.png"
+                        data-src="./assets/topSpros/1auto.png" alt="" class="lazy slider-pagination-img"></a>
+                <a href="http://127.0.0.1:5501/autoPage.html#slider2"
+                    class="slider-pagination-href slider-pagination-href-mob"><img src="./assets/1x1.png"
+                        data-src="./assets/topSpros/1auto.png" alt="" class="lazy slider-pagination-img"></a>
+                <a href="http://127.0.0.1:5501/autoPage.html#slider3"
+                    class="slider-pagination-href slider-pagination-href-mob"><img src="./assets/1x1.png"
+                        data-src="./assets/topSpros/1auto.png" alt="" class="lazy slider-pagination-img"></a>
             </div>
             <div class="auto-top-left">
                 <p class="name-auto">BMW X6 | 2022 </p>
@@ -133,6 +131,13 @@
             hashNavigation: {
                 replaceState: true,
             },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+                bulletActiveClass: 'active-auto-bullet'
+                // clickableClass: 'swiper-pagination-clickable'
+            },
             // autoHeight: true,
             // pagination: {
             //     el: '.swiper-pagination',
@@ -157,12 +162,12 @@
 
         } else {
 
-let pagginBtn = document.querySelectorAll('.slider-pagination-href-mob');
-sliderAuto.on('slideChangeTransitionStart', function () {
-    console.log(12)
-    pagginBtn.forEach(el => { el.classList.remove('active') })
-    pagginBtn[sliderAuto.activeIndex].classList.add('active')
-})
+            let pagginBtn = document.querySelectorAll('.slider-pagination-href-mob');
+            sliderAuto.on('slideChangeTransitionStart', function () {
+                console.log(12)
+                pagginBtn.forEach(el => { el.classList.remove('active') })
+                pagginBtn[sliderAuto.activeIndex].classList.add('active')
+            })
 
         }
 
