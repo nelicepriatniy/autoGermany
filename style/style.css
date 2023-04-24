@@ -1122,9 +1122,9 @@ select:focus .select-svg path {
   width: 0;
   opacity: 0;
   transition-property: width, opacity, margin-left;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
   transition-timing-function: ease;
-  transition-delay: 0.4s, 0s, 0.4s;
+  transition-delay: 0.2s, 0s, 0.2s;
 }
 .seti-button:hover {
   background: #FAFAFA;
@@ -1134,9 +1134,9 @@ select:focus .select-svg path {
   margin-left: 8px;
   opacity: 1;
   transition-property: width, opacity, margin-left;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
   transition-timing-function: ease;
-  transition-delay: 0s, 0.4s, 0s;
+  transition-delay: 0s, 0.2s, 0s;
 }
 
 .btn-seti__img {
@@ -1960,7 +1960,7 @@ footer {
   height: 0px;
   overflow: hidden;
   height: 0;
-  transition: all 0.8s ease;
+  transition: all 0.4s ease;
   bottom: 20px;
   z-index: 49;
   margin-bottom: 50px;
@@ -1976,7 +1976,7 @@ footer {
 .wijet-open.active .wijet-text {
   opacity: 1;
   transition: all 0.4s ease;
-  transition-delay: 0.8s;
+  transition-delay: 0.4s;
 }
 
 .wijet-item {

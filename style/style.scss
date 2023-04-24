@@ -1241,9 +1241,9 @@ select:focus {
         width: 0;
         opacity: 0;
         transition-property: width, opacity, margin-left;
-        transition-duration: .4s;
+        transition-duration: .2s;
         transition-timing-function:ease;
-        transition-delay: .4s, 0s, .4s;
+        transition-delay: .2s, 0s, .2s;
     }
 
     &:hover {
@@ -1256,9 +1256,9 @@ select:focus {
             margin-left: 8px;
             opacity: 1;
             transition-property: width, opacity, margin-left;
-            transition-duration: .4s;
+            transition-duration: .2s;
             transition-timing-function:ease;
-            transition-delay: 0s, .4s, 0s;
+            transition-delay: 0s, .2s, 0s;
         }
 
     }
@@ -2141,7 +2141,7 @@ footer {
     height: 0px;
     overflow: hidden;
     height: 0;
-    transition: all .8s ease;
+    transition: all .4s ease;
     // width: 138px;
     bottom: 20px;
     z-index: 49;
@@ -2159,7 +2159,7 @@ footer {
         & .wijet-text {
             opacity: 1;
             transition: all .4s ease;
-            transition-delay: .8s;
+            transition-delay: .4s;
         }
     }
 }
