@@ -19,7 +19,10 @@
             <p class="little-text header-href-text">Назад</p>
         </a>
         <a href="./index.html" class="header__close headerHref desk lap">
-            <img src="./assets/1x1.png" data-src="./assets/header/close.svg" alt="" class="lazy">
+            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-close">
+                <path d="M1.16117 1.83883L18.8388 19.5165M1.16117 19.5165L18.8388 1.83883" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                
         </a>
     </header>
 
@@ -135,7 +138,9 @@
                 el: '.swiper-pagination',
                 type: 'bullets',
                 clickable: true,
-                bulletActiveClass: 'active-auto-bullet'
+                bulletActiveClass: 'active-auto-bullet',
+                bulletClass: 'auto-pug',
+                modifierClass: 'auto-pug-block '
                 // clickableClass: 'swiper-pagination-clickable'
             },
             // autoHeight: true,

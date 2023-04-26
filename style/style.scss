@@ -1747,6 +1747,7 @@ select:focus {
     &.light {
         color: $Text-Black-500;
         background: $Text-White-300;
+        padding-right: 40px;
     }
 
     &:last-child {
@@ -2111,6 +2112,7 @@ footer {
         transition: all .4s ease;
         height: 100%;
         width: 100%;
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
     }
 
     & .widjet__img-close {
@@ -2119,6 +2121,7 @@ footer {
         transition: all .4s ease;
         height: 100%;
         width: 100%;
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
     }
 
     &.active {
@@ -2188,7 +2191,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #18181c;
+    background: #18181cac;
     padding: 3px 5px;
     position: relative;
     opacity: 0.6;
@@ -2200,6 +2203,8 @@ footer {
     transition: all .2s ease;
     width: 70px;
     height: 20px;
+    padding: 0;
+    line-height: 0;
 
     &::after {
         content: url(./../assets/icons/wijet-arr.svg);
@@ -2208,12 +2213,14 @@ footer {
         right: -5px;
         top: 50%;
         transform: translateY(-50%);
+        opacity: .7;
     }
 }
 
 .wijet-item__img {
     height: 50px;
     width: 50px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
 }
 
 .ckeck {
@@ -2621,10 +2628,7 @@ label {
 
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.auto-pug-block {
     bottom: 0;
     z-index: 99;
     position: absolute;
@@ -2634,8 +2638,7 @@ label {
     top: auto;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.auto-pug {
 
     // z-index: 99;
     width: 60px;
@@ -2643,6 +2646,19 @@ label {
     margin-right: 5px;
     margin-left: 0;
     // position: absolute;
+}
+
+.svg-close {
+    & path {
+        stroke: #FAFAFA;
+        transition: all .2s ease;
+    }
+    &:hover {
+        & path {
+            stroke: $Hover;
+
+        }
+    }
 }
 
 //страница ошибки
@@ -3551,17 +3567,13 @@ label {
 
 
 
-    .swiper-horizontal>.swiper-pagination-bullets,
-    .swiper-pagination-bullets.swiper-pagination-horizontal,
-    .swiper-pagination-custom,
-    .swiper-pagination-fraction {
+    .auto-pug-block {
         bottom: -43px;
         z-index: 99;
         height: 35px !important;
     }
 
-    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    .auto-pug {
 
         // z-index: 99;
         width: 35px;
@@ -4725,6 +4737,10 @@ label {
     }
     .seti-button::after {
         display: none;
+    }
+
+    .auto-desc-text {
+        width: 100%;
     }
 
 }
