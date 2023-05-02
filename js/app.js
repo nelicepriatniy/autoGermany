@@ -127,40 +127,57 @@ const actSale = new Swiper('.as-slider', {
 let numSlide = document.querySelector('.numSlideThere');
 let kolSlides = document.querySelector('.kolSlideThere');
 let slides = document.querySelectorAll('.lap-slides')
+let lapTabs = document.querySelector('body');
 
-const lapTabs = new Swiper('.lap-slider-tabs', {
-    slidesPerView: 1,
-    spaceBetween: 40,
-    autoHeight: true,
-    navigation: {
-      nextEl: '.st-next',
-      prevEl: '.st-prew',
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
+
+if (window.innerWidth > 1000) {
+
+     lapTabs = document.querySelector('body');
+
+} else {
+     lapTabs = new Swiper('.lap-slider-tabs', {
         slidesPerView: 1,
-        spaceBetween: 20
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 40
-      }
-    },
-    on: {
-        slideChangeTransitionStart: function(){
-            numSlide.innerHTML = this.activeIndex + 1;
-            kolSlides.innerHTML = slides.length / 6;
-        
+        spaceBetween: 40,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.st-next',
+          prevEl: '.st-prew',
         },
-        // init: function(){
-        // numSlide.innerHTML = lapTabs.activeIndex + 1;
-        // kolSlides.innerHTML = slides.length;
-        
-        // }
-    }
-});
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 40
+          },
+          1000: {
+            init: false,
+          }
+        },
+        on: {
+            slideChangeTransitionStart: function(){
+                numSlide.innerHTML = this.activeIndex + 1;
+                kolSlides.innerHTML = slides.length / 6;
+            
+            },
+            // init: function(){
+            // numSlide.innerHTML = lapTabs.activeIndex + 1;
+            // kolSlides.innerHTML = slides.length;
+            
+            // }
+            slideChangeTransitionStart: function(){
+                numSlide.innerHTML = this.activeIndex + 1;
+                kolSlides.innerHTML = slides.length /6;
+            }
+        }
+    });
+
+}
+
 
 // lapTabs.on('slideChangeTransitionStart', ()=>{
 //     numSlide.innerHTML = lapTabs.activeIndex + 1;
@@ -454,44 +471,71 @@ let tabBtns = document.querySelectorAll('[data-sprostab]')
 let lapSlides = document.querySelectorAll('.lap-slider-tabs')
 let deskSlides = document.querySelectorAll('.top-spros__tabContainer')
 
-tabBtns.forEach(el=>{
-    el.onclick = ()=>{
-        let blockId = el.getAttribute('data-sprostab');
-        let block = document.querySelectorAll('#'+blockId)
-        el.activeIndex = 1;
-        // lapTabs.slideTo(0);
-        lapTabs.forEach(el=>{
-            el.slideTo(0);
-        })
-        numSlide.innerHTML = 1;
-        console.log(block)
-        lapSlides.forEach(el=>{
-            el.classList.remove('visible')
+
+if (window.innerWidth < 1000) {
+    tabBtns.forEach(el=>{
+        el.onclick = ()=>{
+            let blockId = el.getAttribute('data-sprostab');
+            let block = document.querySelectorAll('#'+blockId)
             el.activeIndex = 1;
-            lapTabs.activeIndex = 1;
+            // lapTabs.slideTo(0);
+            lapTabs.forEach(el=>{
+                el.slideTo(0);
+            })
             numSlide.innerHTML = 1;
-        })
-        deskSlides.forEach(el=>{
-            el.classList.remove('visible')
-            el.activeIndex = 1;
-            lapTabs.activeIndex = 1;
-            numSlide.innerHTML = 1;
-        })
-        block.forEach(el=>{
-            el.classList.add('visible')
-            el.activeIndex = 1;
-            lapTabs.activeIndex = 1;
-            numSlide.innerHTML = 1;
-        })
-        tabBtns.forEach(elem=>{
-            elem.classList.remove('active')
-            el.activeIndex = 1;
-            lapTabs.activeIndex = 1;
-            numSlide.innerHTML = 1;
-        })
-        el.classList.add('active')
-    }
-})
+            console.log(block)
+            lapSlides.forEach(el=>{
+                el.classList.remove('visible')
+                el.activeIndex = 1;
+                lapTabs.activeIndex = 1;
+                numSlide.innerHTML = 1;
+            })
+            deskSlides.forEach(el=>{
+                el.classList.remove('visible')
+                el.activeIndex = 1;
+                lapTabs.activeIndex = 1;
+                numSlide.innerHTML = 1;
+            })
+            block.forEach(el=>{
+                el.classList.add('visible')
+                el.activeIndex = 1;
+                lapTabs.activeIndex = 1;
+                numSlide.innerHTML = 1;
+            })
+            tabBtns.forEach(elem=>{
+                elem.classList.remove('active')
+                el.activeIndex = 1;
+                lapTabs.activeIndex = 1;
+                numSlide.innerHTML = 1;
+            })
+            el.classList.add('active')
+        }
+    })
+
+} else {
+    tabBtns.forEach(el=>{
+        el.onclick = ()=>{
+            let blockId = el.getAttribute('data-sprostab');
+            let block = document.querySelectorAll('#'+blockId)
+            // lapTabs.slideTo(0);
+            console.log(block)
+            lapSlides.forEach(el=>{
+                el.classList.remove('visible')
+            })
+            deskSlides.forEach(el=>{
+                el.classList.remove('visible')
+            })
+            block.forEach(el=>{
+                el.classList.add('visible')
+            })
+            tabBtns.forEach(elem=>{
+                elem.classList.remove('active')
+            })
+            el.classList.add('active')
+        }
+    })
+
+}
 
 let calcOption = document.querySelectorAll('option')
 
@@ -581,3 +625,30 @@ scrollBtn.forEach(el => {
     })
 });
 
+//смена картинки при наведении на тригер
+
+// let trigger = document.querySelectorAll('[data-img]')
+// let imgChange = document.querySelectorAll('.top-spros-card__top__img')
+// let bullets = document.querySelectorAll('.bullet-tabs-one')
+
+// trigger.forEach((el, i) =>{
+//     el.onmousemove = ()=>{
+//         let dataSrc = el.getAttribute('data-img')
+//         imgChange.forEach(el=>{
+//             el.setAttribute('src', dataSrc);
+
+//         })
+//         bullets.forEach(el=>{
+//             el.classList.remove('active')
+//         })
+//         bullets[i].classList.add('active')
+//     }
+// })
+
+// trigger.onHover = ()=>{
+//     console.log(12)
+// }
+
+// trigger.addEventListener('mousemove', ()=>{
+//     console.log(12)
+// })
