@@ -243,17 +243,46 @@
                                     let imgChange = document.querySelector('#top-spros-1')
                                     let bullets = document.querySelectorAll('#bb1')
 
-                                    trigger.forEach((el, i) => {
-                                        el.onmousemove = () => {
-                                            console.log(123)
-                                            let dataSrc = el.getAttribute('data-img')
-                                            imgChange.setAttribute('src', dataSrc);
-                                            bullets.forEach(el => {
-                                                el.classList.remove('active')
-                                            })
-                                            bullets[i].classList.add('active')
-                                        }
-                                    })
+                                    if(window.innerWidth > 1000) {
+
+                                        trigger.forEach((el, i) => {
+                                            el.onmousemove = () => {
+                                                console.log(123)
+                                                let dataSrc = el.getAttribute('data-img')
+                                                imgChange.setAttribute('src', dataSrc);
+                                                bullets.forEach(el => {
+                                                    el.classList.remove('active')
+                                                })
+                                                bullets[i].classList.add('active')
+                                            }
+                                        })
+
+                                    } else {
+                                        let index = 1
+                                        trigger.forEach((el, i)=>{
+                                            el.onclick = ()=>{
+                                                if(index < trigger.length) {
+                                                    let dataSrc = trigger[index].getAttribute('data-img');
+                                                    imgChange.setAttribute('src', dataSrc);
+                                                    bullets.forEach(el => {
+                                                        el.classList.remove('active')
+                                                    })
+                                                    bullets[index].classList.add('active')
+                                                    index++;
+
+                                                } else if (index >= trigger.length ) {
+                                                    index = 0
+                                                    let dataSrc = trigger[index].getAttribute('data-img');
+                                                    imgChange.setAttribute('src', dataSrc);
+                                                    bullets.forEach(el => {
+                                                        el.classList.remove('active')
+                                                    })
+                                                    bullets[index].classList.add('active')
+                                                        index = 1;
+                                                    }
+                                            }
+                                        })
+                                    }
 
                                     trigger.onHover = () => {
                                         console.log(12)
