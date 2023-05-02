@@ -4105,10 +4105,10 @@ label {
     width: 100%;
   }
   .bm-text {
-    font-family: "Onest";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 155%;
+    font-family: "Onest" !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 155% !important;
   }
 }/*# sourceMappingURL=style.css.map */
