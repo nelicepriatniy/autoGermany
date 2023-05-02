@@ -4114,4 +4114,7 @@ label {
          text-size-adjust: none;
     -webkit-text-size-adjust: none;
   }
+  .top-spros-card__top__img {
+    aspect-ratio: 560/380;
+  }
 }/*# sourceMappingURL=style.css.map */
